@@ -1,0 +1,28 @@
+h1.page-header Lighting schedule
+
+div(ng-controller='LightScheduleController')
+ div(pickadate ng-model='date' sun-set='sunset' min-date='minDate' max-date='maxDate' disabled-dates='disabledDates'  week-starts-on='0' no-extra-rows class='row placeholders')
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-8.placeholder
+    div(ng-model='date')
+     {{date}}
+     br()
+     ligthing switch on: {{sunset}}
+     br()
+     lighting switch off: 21:00
+  .col-xs-6.col-sm-3.col-md-1.placeholder
+   a(href='' ng-click='lightScheduleSwitchChage()' ng-show='lightScheduleSwitchOn')
+    i.fa.fa-toggle-on.fa-2x
+   a(href='' ng-click='lightScheduleSwitchChage()' ng-show='lightScheduleSwitchOff')
+    i.fa.fa-toggle-off.fa-2x
+   h4 Schedule switch
+   span.text-muted status: {{lightScheduleSwitchState}}
+  .col-xs-6.col-sm-3.col-md-1.placeholder
+  .col-xs-6.col-sm-3.col-md-1.placeholder
+  
+   a(href='' ng-click='lightSwitchChage()' ng-show='lightSwitchOn')
+    i.fa.fa-toggle-on.fa-2x
+   a(href='' ng-click='lightSwitchChage()' ng-show='lightSwitchOff')
+    i.fa.fa-toggle-off.fa-2x
+   h4 Light switch
+   span.text-muted status: {{lightSwitchState}}

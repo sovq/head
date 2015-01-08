@@ -1,0 +1,71 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../favicon.ico')
+    title Grow manager
+    // Bootstrap core CSS
+    link(href='stylesheets/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='stylesheets/dashboard.css', rel='stylesheet')
+    link(href='stylesheets/angular-pickadate.css', rel='stylesheet')
+    link(rel='stylesheet', href='font-awesome-4.2.0/css/font-awesome.min.css')
+    script(src='/javascripts/angular.js') 
+    script(src='/javascripts/angular-route.js')
+    script(src='/javascripts/app.js')
+    script(src='/javascripts/angular-pickadate.js')
+    script(src='/javascripts/d3.js')       
+    script(src='/javascripts/angular-charts.js')
+    script(src='/javascripts/LogsDisplayController.js') 
+    script(src='/socket.io/socket.io.js')
+  body(ng-app='GreenHouseApp')
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation     
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#')  Grow manager
+        #navbar.navbar-collapse.collapse
+         
+    .container-fluid
+      .row
+        .col-sm-3.col-md-2.sidebar
+          ul.nav.nav-sidebar
+            li
+              a(href='#/lighting') Lighting
+            li
+              a(href='#/watering') Watering
+            li
+              a(href='#') Watch
+          ul.nav.nav-sidebar
+            li
+              a(href='#/logs') Browse Logs
+        div(ng-view).col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+          .row.placeholders
+            .col-xs-6.col-sm-3.placeholder
+              i.fa.fa-lightbulb-o.fa-5x
+              h4 Lighting
+              span.text-muted Lighting schedule
+            .col-xs-6.col-sm-3.placeholder
+              i.fa.fa-tint.fa-5x
+              h4 Watering
+              span.text-muted Watering &amp; humidity
+            .col-xs-6.col-sm-3.placeholder
+              i.fa.fa-camera.fa-5x
+              h4 Watch
+              span.text-muted Live stream  
+            .col-xs-6.col-sm-3.placeholder
+              i.fa.fa-folder-open.fa-5x
+              h4 Logs
+              span.text-muted Browse logs
+              
+    // Placed at the end of the document so the pages load faster
+    script(src='javascripts/jquery.min.js')
+    |     
+    script(src='javascripts/bootstrap.min.js')

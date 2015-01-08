@@ -1,0 +1,27 @@
+doctype html
+html(lang='en', ng-app='GreenHouse')
+ head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+  link(rel='stylesheet', href='/stylesheets/style.css') 
+  script(src='/javascripts/angular.js')  
+  script(src='/javascripts/d3.js')       
+  script(src='/javascripts/angular-charts.js')    
+  script(src='/javascripts/GreenHouse.js')
+  script(src='/socket.io/socket.io.js')
+
+ body(ng-controller="GreenHouseCtrl")
+  div(data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" style="widht:400px;height:300px;")
+  div
+   p temperatura wynosi {{my_temperature}}
+  
+   
+  div(class="onoffswitch")
+   input(type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" ng-model="lightSwitch" ng-change="lightSwitchChage()")  
+   label(class="onoffswitch-label" for="myonoffswitch")
+    span(class="onoffswitch-inner")
+     span(class="onoffswitch-active")
+      span(class="onoffswitch-switch")="ON"
+     span(class="onoffswitch-inactive")
+      span(class="onoffswitch-switch")="OFF"
+      
