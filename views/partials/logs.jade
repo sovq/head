@@ -6,23 +6,26 @@ div(ng-controller='LogsDisplayController')
    h2 Temperature
  div(class='row placeholder')
   .col-xs-6.col-sm-3.col-md-12.placeholder
-  div(data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" style="widht:100%;height:300px;")
+   div(data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" style="widht:100%;height:300px;")
  div(class='row placeholder')
  
   .col-xs-6.col-sm-3.col-md-2.placeholder
-   a(href='' ng-click='moveChartLeft()') 
+   a(href='' ng-click='moveChart("left")') 
     i.fa.fa-arrow-left 
 
   .col-xs-6.col-sm-3.col-md-2.placeholder
   .col-xs-6.col-sm-3.col-md-2.placeholder
-   a(href='' ng-click='zoomChartOut()' ng-show='DisplayZoomOut') 
+   a(href='' ng-click='zoomChart("out")' ng-show='DisplayZoomOut') 
     i.fa.fa-search-minus
-   &nbsp;&nbsp; {{timeSpan}} &nbsp;&nbsp;
-   a(href='' ng-click='zoomChartIn()' ng-show='DisplayZoomIn') 
+   &nbsp;&nbsp; {{zoomLevel}} &nbsp;&nbsp;
+   a(href='' ng-click='zoomChart("in")' ng-show='DisplayZoomIn') 
     i.fa.fa-search-plus
 
   .col-xs-6.col-sm-3.col-md-2.placeholder
   .col-xs-6.col-sm-3.col-md-2.placeholder
-   a(href='' 'moveChartRight()' ) 
+   a(href='' ng-click='moveChart("right")' ) 
     .fa.fa-arrow-right
-  
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-12.placeholder.
+   start: {{startDate| date:"MM/dd/yyyy 'at' h:mma"}}
+   end:{{endDate| date:"MM/dd/yyyy 'at' h:mma"}}

@@ -1,14 +1,22 @@
-
-/**
- * Module dependencies.
+/*
+ *	Configuration
  */
+ 
+var dummyDevices = false;
+var runDirectory = '/home/pi/greenhouse';
 
+/*
+ *  Database
+ * */
+
+var Nedb = require('nedb')
+var temperatureDB = new Nedb({ filename: runDirectory+'/temperature.db', autoload: true });
+	
 var express = require('express')
-  , routes = require('./routes')
+  , routes = require('./routes')({tempDB:temperatureDB})
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
-
 var app = express();
 
 // all environments
@@ -56,7 +64,7 @@ var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent)
 scheduler.checkStatus();
 
 var sensor = require('sensor');
-var  temperatureSensor = new sensor('python /home/pi/greenhouse/python/termometer.py');
+var  temperatureSensor = new sensor('python /home/pi/greenhouse/python/termometer.py',temperatureDB);
 temperatureSensor.enable();
 
 io.on('connection', function (socket) {
@@ -77,7 +85,7 @@ io.on('connection', function (socket) {
 	});
 
 	socket.on('disconnect',function(){
-		scheduler.disconnectEventHandler(scheduler,{ioSocket:socket})
+	//	scheduler.disconnectEventHandler(scheduler,{ioSocket:socket})
 	});
 });
 
