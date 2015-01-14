@@ -39,6 +39,7 @@ GreenHouseApp.controller('LogsDisplayController', ['$scope','$http',function($sc
 		tooltips: true,
 		labels: false,
 		xAxisMaxTicks: 6,
+		
 		mouseover: function() {},
 		mouseout: function() {},
 		click: function() {},

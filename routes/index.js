@@ -59,7 +59,7 @@ function routes(params){
 			var meanArray = tempUtils.createMeanArray(start,end,docs)
 			for(var i=0;i<docs.length;i++){
 				var doc = docs[i];
-				for(var j=0;j<25;j++){
+				for(var j=0;j<50;j++){
 					var meanArrayElement = meanArray[j];
 					var meanArrayNext = meanArray[j+1];
 					if (doc.date>=meanArrayElement.start && doc.date<=meanArrayNext.start){

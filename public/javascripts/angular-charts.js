@@ -215,9 +215,11 @@ angular.module('angularCharts').directive('acChart', [
         var yData = [];
         var linedata = [];
         points.forEach(function (d) {
+		  if(!(d.y[0]=="no_data"||d.y[0]=="future")){
           d.y.map(function (e) {
             yData.push(e);
           });
+			}
         });
         var yMaxPoints = d3.max(points.map(function (d) {
             return d.y.length;
@@ -233,19 +235,42 @@ angular.module('angularCharts').directive('acChart', [
                 y: e,
                 tooltip: point.tooltip
               };
-            })[index] || {
-              x: points[index].x,
-              y: 0
-            };
+            })[index] 
           });
-          linedata.push(d);
+          
+          var actualValues = [];
+          var lineChunksArray = [];
+          var lineContinues = false;
+          
+          for(a=0;a<d.values.length;a++){
+	
+			  var item = d.values[a];
+			  
+			  if(item.y!="future" && item.y!="no_data"){
+				  actualValues.push(item);
+				  lineContinues = true;
+			  }else{
+				  if(lineContinues==true){
+					lineChunksArray.push(actualValues);
+				  }
+				  actualValues = [];
+				  lineContinues = false;
+			  }
+		  }
+		  
+		  
+		   
+		  lineChunksArray.forEach(function(item){
+			linedata.push({series:"",values:item});  
+		  })
+		  linedata[linedata.length-1].series=value;
         });
         var svg = d3.select(chartContainer[0]).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 		var setDifferenece = 	d3.max(yData) - d3.min(yData);
    
         y.domain([
-          d3.min(yData) - (setDifferenece*0.05),
-          d3.max(yData) + (setDifferenece*0.05)
+          d3.min(yData) - (setDifferenece*1.05),
+          d3.max(yData) + (setDifferenece*1.05)
         ]);
         svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
         svg.append('g').attr('class', 'y axis').call(yAxis);
@@ -263,7 +288,7 @@ angular.module('angularCharts').directive('acChart', [
           var last = linedata[linedata.length - 1].values;
           if (last.length > 0) {
             var totalLength = path.node().getTotalLength() + getX(last[last.length - 1].x);
-            path.attr('stroke-dasharray', totalLength + ' ' + totalLength).attr('stroke-dashoffset', totalLength).transition().duration(config.isAnimate ? 1500 : 0).ease('linear').attr('stroke-dashoffset', 0).attr('d', function (d) {
+            path.attr('stroke-dasharray', totalLength + ' ' + totalLength).attr('stroke-dashoffset', totalLength).transition().ease('linear').attr('stroke-dashoffset', 0).attr('d', function (d) {
               return line(d.values);
             });
           }
@@ -275,12 +300,13 @@ angular.module('angularCharts').directive('acChart', [
        * @return {[type]}       [description]
        */
         angular.forEach(linedata, function (value, key) {
-          var points = svg.selectAll('.circle').data(value.values).enter();
+		  
+          var points = svg.selectAll('.circle').data(removeNoDataAndFuture(value.values)).enter();
           points.append('circle').attr('cx', function (d) {
             return getX(d.x);
           }).attr('cy', function (d) {
             return y(d.y);
-          }).attr('r', 0).style('fill', getColor(linedata.indexOf(value))).style('stroke', getColor(linedata.indexOf(value))).on('mouseover', function (series) {
+          }).attr('r', 1.5).style('fill', getColor(linedata.indexOf(value))).style('stroke', getColor(linedata.indexOf(value))).on('mouseover', function (series) {
             return function (d) {
               makeToolTip({
                 index: d.x,
@@ -336,7 +362,16 @@ angular.module('angularCharts').directive('acChart', [
         return linedata;
       }
 
-
+	function removeNoDataAndFuture(array){
+		var actualValues = [];
+		  for(i=0;i<array.length;i++){
+			  var myVar = array[i]
+			  if(!(myVar.y == "future" || myVar.y == "no_data")){
+				  actualValues.push(myVar);
+			  }
+		  }
+		 return actualValues;
+	}
 
       /**
      * Creates and displays tooltip
@@ -422,13 +457,8 @@ angular.module('angularCharts').directive('acChart', [
      * @return {[type]}   [description]
      */
       function getColor(i) {
-        if (i < config.colors.length) {
-          return config.colors[i];
-        } else {
-          var color = getRandomColor();
-          config.colors.push(color);
-          return color;
-        }
+        return 'blue';
+        
       }
       var w = angular.element($window);
       var resizePromise = null;
