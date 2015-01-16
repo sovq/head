@@ -4,6 +4,9 @@ var GreenHouseApp = angular.module('GreenHouseApp', [
 
 GreenHouseApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
+      when('/',{
+		   templateUrl: 'partials/home',
+	  }).
       when('/lighting', {
         templateUrl: 'partials/lighting',
         controller: 'LightScheduleController'
@@ -12,10 +15,10 @@ GreenHouseApp.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/watering',
       }).when('/logs',{
 		  templateUrl: 'partials/logs',
-		  controller: 'LogsDisplayController'		  
+//		  controller: 'LogsDisplayController'		  
 	  }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: 'partials/404'
       });
 }]);
 

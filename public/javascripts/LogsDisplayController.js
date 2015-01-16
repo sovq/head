@@ -15,6 +15,7 @@ function getChartData(scope,dateSpan,http){
 }
 
 
+
 function getTimeSpan(middle,duration){
 	var middleMilliseconds = middle.valueOf()
 	var start = new Date();
@@ -33,7 +34,9 @@ function setStartEndInScope(scope,span){
 	scope.endDate = end;
 }
 
-GreenHouseApp.controller('LogsDisplayController', ['$scope','$http',function($scope,$http){
+
+
+GreenHouseApp.controller('ChartDisplayController', ['$scope','$http',function($scope,$http){
 	$scope.config = {
 		title: 'Temperature',
 		tooltips: true,
@@ -49,7 +52,18 @@ GreenHouseApp.controller('LogsDisplayController', ['$scope','$http',function($sc
 		  position: 'right'
 		}
 	};
-		
+	function getLightSwitchLog(){	
+		$http.get('/lightswitchlog').
+			success(function(data, status, headers, config) {
+				console.log(data);
+				$scope.lightSwitchLogData=data;		  
+			}).
+			error(function(data, status, headers, config) {
+				alert('zjebanstwo');		  
+		});	
+	}
+	$scope.lightSwitchLogData=[{date:1,toggle:"on",source:"hge"},{date:1,toggle:"on",source:"hge"}]
+	getLightSwitchLog()
 		
 	$scope.DisplayZoomOut = true;
 	$scope.DisplayZoomIn = true;
@@ -89,11 +103,27 @@ GreenHouseApp.controller('LogsDisplayController', ['$scope','$http',function($sc
 	
 	
 }]);
+
+
 	
 	
+GreenHouseApp.directive('lightswitchlog',  function() {
 	
-	
-	
+  return {
+    scope: {
+    logdata: "="
+},  // use a child scope that inherits from parent
+    restrict: 'AE',
+    replace: 'true',
+	template: '<span><ul>' + 
+				  '<li ng-repeat="d in logdata">' +
+					'date: {{d.date}},  toggle: {{d.toggle}} , source: {{d.origin}}' + 
+					  '</li>' +
+				'</ul></span>'
+					
+  };
+
+});
 	
 	
 	

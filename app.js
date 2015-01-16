@@ -11,9 +11,10 @@ var runDirectory = '/home/pi/greenhouse';
 
 var Nedb = require('nedb')
 var temperatureDB = new Nedb({ filename: runDirectory+'/temperature.db', autoload: true });
+var lightswitchlogDB = new Nedb({ filename: '/home/pi/greenhouse/ligthswitchlog.db', autoload: true });
 	
 var express = require('express')
-  , routes = require('./routes')({tempDB:temperatureDB})
+  , routes = require('./routes')({tempDB:temperatureDB,lightSwitchLogDB:lightswitchlogDB})
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -42,7 +43,7 @@ app.get('/partials/:name', function (req, res)
    res.render('partials/' + name);
 });
 app.get('/lightinfo/:date', routes.lightinfo);
-
+app.get('/lightswitchlog', routes.lightswitchlog);
 app.get('/temperature/start/:start/end/:end', routes.temperature)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
@@ -57,7 +58,7 @@ connectionEvent = new EventEmitter();
 ioEvent = new EventEmitter();
 
 var ooswitch = require('ooswitch');
-var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py');
+var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py',lightswitchlogDB);
 var lightschedule = require('lightschedule');
 
 var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent)

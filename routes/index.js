@@ -5,6 +5,7 @@
 
 function routes(params){
 	var tempDB = params.tempDB;
+	var lightSwitchLogDB = params.lightSwitchLogDB;
 	var dateFormat = require('dateformat');
 	var tempUtils = require('./temperature');
 
@@ -77,6 +78,23 @@ function routes(params){
 			res.end(json);
 		});
 	}
+	
+	this.lightswitchlog = function(req,res){
+		var resultsArray = [];
+		lightSwitchLogDB.find({}).sort({date:-1}).exec(function(err,docs){
+			for(i=0;i<docs.length;i++){
+				var doc = docs[i];
+				resultsArray.push({
+					date: doc.date,
+					toggle: doc.toggle,
+					origin: doc.origin
+				});
+			}
+			var json = JSON.stringify(resultsArray); 
+			res.end(json);
+		});	
+	}
+	
 	return this;
 }
 module.exports = routes;
