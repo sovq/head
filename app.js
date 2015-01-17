@@ -29,7 +29,10 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(function(req, res) {
+    res.status(400);
+   res.render('404.jade', {title: '404: Nima strony'});
+});
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
