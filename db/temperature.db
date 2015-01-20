@@ -259,6 +259,7 @@
 {"date":"2015-01-16, 21:43:42","temperature":"21.875","sensor":"air","_id":"17qzR2IdawBxUzRa"}
 {"date":"2015-01-19, 19:22:26","temperature":"18.437","sensor":"air","_id":"17yKDWSAQl4nMHBO"}
 {"date":"2015-01-16, 04:38:26","temperature":"22.25","sensor":"air","_id":"180IACZzMQtuapoJ"}
+{"date":"2015-01-20, 01:47:14","value":"21.687","sensor":"termo AIR","_id":"18KXRUHj2wxzWUTP"}
 {"date":"2015-01-14, 05:52:45","temperature":"22.562","sensor":"air","_id":"18OUBel8O1b64nZX"}
 {"date":"2015-01-14, 09:05:18","temperature":"22.562","sensor":"air","_id":"18ipeoqkfIlC0eog"}
 {"date":"2014-12-27, 02:26:25","temperature":"21.375","sensor":"air","_id":"18lOBqHBGDJ3qFcU"}
@@ -573,6 +574,7 @@
 {"date":"2015-01-14, 06:12:51","temperature":"22.5","sensor":"air","_id":"2hAxBf2wglzvUEyU"}
 {"date":"2014-12-24, 02:36:15","temperature":"23.5","sensor":"air","_id":"2hCoxrJv0L8ikINf"}
 {"date":"2015-01-14, 18:46:19","temperature":"22.75","sensor":"air","_id":"2hECGb61k3j3f4DA"}
+{"date":"2015-01-20, 01:48:27","value":"21.687","sensor":"termo AIR","_id":"2hS6ILatohIW3Pnh"}
 {"date":"2014-12-24, 12:37:08","temperature":"22.625","sensor":"air","_id":"2hftRXje3Ytz6GYM"}
 {"date":"2015-01-16, 23:56:01","temperature":"21.125","sensor":"air","_id":"2hqLZFnmH0knQvWw"}
 {"date":"2014-12-27, 09:18:50","temperature":"20.75","sensor":"air","_id":"2hseSMVgbBayknaU"}
@@ -1016,6 +1018,7 @@
 {"date":"2015-01-14, 02:59:45","temperature":"22.312","sensor":"air","_id":"4oKmWqGUouAQM0i9"}
 {"date":"2015-01-16, 12:16:27","temperature":"22.75","sensor":"air","_id":"4om1dWLaymNmKOn5"}
 {"date":"2015-01-04, 14:50:49","temperature":"22.25","sensor":"air","_id":"4orXhLgAJRY1eG7z"}
+{"date":"2015-01-20, 01:46:14","value":"21.625","sensor":"termo AIR","_id":"4owIeyajAPuXwcoq"}
 {"date":"2014-12-27, 02:54:34","temperature":"21.187","sensor":"air","_id":"4pJIvBqH2rSwgugT"}
 {"date":"2015-01-16, 01:58:16","temperature":"22.062","sensor":"air","_id":"4paUJD3vX9CYj4vw"}
 {"date":"2014-12-23, 21:28:52","temperature":"23.437","sensor":"air","_id":"4pm3KoYx1MTJG6xk"}
@@ -1104,6 +1107,7 @@
 {"date":"2015-01-19, 19:23:56","temperature":"18.5","sensor":"air","_id":"5HVEIuHnOkcZZLLu"}
 {"date":"2015-01-16, 07:27:22","temperature":"22.375","sensor":"air","_id":"5IBqeSgS8HbLRTFl"}
 {"date":"2014-12-27, 01:25:36","temperature":"21.75","sensor":"air","_id":"5JH8w9JurL3eMPHy"}
+{"date":"2015-01-20, 01:50:08","value":"21.687","sensor":"termo AIR","_id":"5JdZF3LQXZkyAWlc"}
 {"date":"2015-01-04, 15:43:35","temperature":"22.375","sensor":"air","_id":"5JkWFFkK3YoFMicW"}
 {"date":"2015-01-12, 22:12:32","temperature":"21.875","sensor":"air","_id":"5KyxrQdghNCtfhKV"}
 {"date":"2014-12-26, 23:42:34","temperature":"22.062","sensor":"air","_id":"5LDfMmzgjbnBp1Lu"}
@@ -1557,6 +1561,7 @@
 {"date":"2014-12-27, 12:34:45","temperature":"21.625","sensor":"air","_id":"7YcmsnZE4tny6YwX"}
 {"date":"2014-12-23, 22:33:41","temperature":"23.25","sensor":"air","_id":"7Yyl9A5hEK7mi668"}
 {"date":"2014-12-24, 04:21:12","temperature":"23.062","sensor":"air","_id":"7Z0FTpTgukxSo8zk"}
+{"date":"2015-01-20, 01:44:43","value":"21.687","sensor":"termo AIR","_id":"7Zb3ebbmnhqDqqH2"}
 {"date":"2014-12-24, 18:18:14","temperature":"23.375","sensor":"air","_id":"7ZjqSvBfB7I56DS5"}
 {"date":"2015-01-04, 09:56:54","temperature":"21.0","sensor":"air","_id":"7aKLPAoV76LzGXmd"}
 {"date":"2015-01-14, 11:12:00","temperature":"23.125","sensor":"air","_id":"7aUh3yIm778xF3EC"}
@@ -1626,6 +1631,7 @@
 {"date":"2015-01-13, 21:38:40","temperature":"22.062","sensor":"air","_id":"7xFgY0RA1VhZLtux"}
 {"date":"2015-01-19, 22:19:23","temperature":"21.062","sensor":"air","_id":"7xGk29Y4zgri27BJ"}
 {"date":"2014-12-27, 07:59:27","temperature":"20.75","sensor":"air","_id":"7xUntFb97ObiXxVz"}
+{"date":"2015-01-20, 01:42:13","value":"21.625","sensor":"termo AIR","_id":"7xnu9mN1Nc8jjSrv"}
 {"date":"2015-01-19, 19:57:38","temperature":"18.75","sensor":"air","_id":"7yXa4nx3FiJAykxT"}
 {"date":"2015-01-19, 22:47:32","temperature":"21.5","sensor":"air","_id":"7ydybBI1zf54QlNq"}
 {"date":"2015-01-16, 17:02:30","temperature":"22.437","sensor":"air","_id":"7yfNZ6uM4B6bf4rT"}
@@ -1856,6 +1862,7 @@
 {"date":"2015-01-14, 12:57:31","temperature":"22.812","sensor":"air","_id":"948v5ZjzWnqKCJH4"}
 {"date":"2015-01-12, 21:49:15","temperature":"21.687","sensor":"air","_id":"94A3sKkSVeoICpDo"}
 {"date":"2014-12-27, 01:05:00","temperature":"21.937","sensor":"air","_id":"94CQYwwIFriQd6mk"}
+{"date":"2015-01-20, 01:47:45","value":"21.687","sensor":"termo AIR","_id":"94wQw57io2eITWT0"}
 {"date":"2014-12-24, 13:12:50","temperature":"22.5","sensor":"air","_id":"954Q1348E3qu9ly4"}
 {"date":"2015-01-14, 20:12:48","temperature":"22.75","sensor":"air","_id":"956S3AoleODxpLA5"}
 {"date":"2015-01-14, 02:14:30","temperature":"22.187","sensor":"air","_id":"957qO6wGL7vU7Y5u"}
@@ -2592,6 +2599,7 @@
 {"date":"2015-01-04, 10:34:04","temperature":"21.437","sensor":"air","_id":"CSwI9bNU5URWrRTG"}
 {"date":"2015-01-19, 19:19:55","temperature":"18.437","sensor":"air","_id":"CT1O59zLJzrmrPxB"}
 {"date":"2015-01-04, 12:08:31","temperature":"22.0","sensor":"air","_id":"CTmlEyjQ9OIHb8kb"}
+{"date":"2015-01-20, 01:41:43","value":"21.562","sensor":"termo AIR","_id":"CTr1GToPxOx9nzIM"}
 {"date":"2015-01-14, 02:01:55","temperature":"22.125","sensor":"air","_id":"CTutE8kI6XvJ81ei"}
 {"date":"2014-12-27, 01:01:29","temperature":"21.937","sensor":"air","_id":"CTwl8FmJpj0hHwzZ"}
 {"date":"2014-12-23, 23:25:26","temperature":"23.0","sensor":"air","_id":"CUXEmHg2HlBfqyJZ"}
@@ -3255,6 +3263,7 @@
 {"date":"2015-01-16, 13:31:21","temperature":"22.687","sensor":"air","_id":"FchJUSDhh3Ody17v"}
 {"date":"2015-01-14, 01:04:36","temperature":"22.25","sensor":"air","_id":"FctOwZyQDKQuhKrJ"}
 {"date":"2015-01-13, 00:45:45","temperature":"22.125","sensor":"air","_id":"Fd71BtwPVRbGzf3A"}
+{"date":"2015-01-20, 01:46:44","value":"21.687","sensor":"termo AIR","_id":"FdLjyRqkepBdnR1f"}
 {"date":"2014-12-24, 08:28:22","temperature":"22.562","sensor":"air","_id":"Fdu5dRxQ8GicsNUn"}
 {"date":"2014-12-27, 05:43:19","temperature":"21.0","sensor":"air","_id":"FeV2ca8jcqGXufVR"}
 {"date":"2015-01-14, 10:08:41","temperature":"22.5","sensor":"air","_id":"FeZEgZoTR9FzZ5nr"}
@@ -3495,6 +3504,7 @@
 {"date":"2015-01-16, 11:19:09","temperature":"22.937","sensor":"air","_id":"Go7ttIcR9zmT9a4Z"}
 {"date":"2014-12-24, 18:10:13","temperature":"23.437","sensor":"air","_id":"GoWCTr7uZEu5GDaI"}
 {"date":"2014-12-26, 22:32:43","temperature":"21.5","sensor":"air","_id":"Goj4OMZJ1XZJk5LV"}
+{"date":"2015-01-20, 01:45:14","value":"21.625","sensor":"termo AIR","_id":"GpNZmih3qdbRAXfN"}
 {"date":"2014-12-24, 13:26:54","temperature":"22.375","sensor":"air","_id":"GpZTn9HOCqmnuNXB"}
 {"date":"2015-01-16, 16:20:16","temperature":"22.312","sensor":"air","_id":"GpaM87Fn5ZsxpStU"}
 {"date":"2015-01-16, 16:57:29","temperature":"22.437","sensor":"air","_id":"GpjutVavARroyoAm"}
@@ -3604,6 +3614,7 @@
 {"date":"2015-01-16, 01:22:58","temperature":"21.437","sensor":"air","_id":"HFkc5GN9g3uqKFRs"}
 {"date":"2015-01-16, 17:01:00","temperature":"22.437","sensor":"air","_id":"HGSPNClo5gANBju0"}
 {"date":"2015-01-04, 13:59:33","temperature":"22.187","sensor":"air","_id":"HGqQhai8DpOh0KoG"}
+{"date":"2015-01-20, 01:46:14","value":"21.625","sensor":"termo AIR","_id":"HGqpYKflQG6ubgF1"}
 {"date":"2015-01-16, 05:57:52","temperature":"22.375","sensor":"air","_id":"HHTRygreju3nflBN"}
 {"date":"2015-01-04, 06:50:32","temperature":"21.187","sensor":"air","_id":"HHX6uRQxgltesEN3"}
 {"date":"2014-12-24, 04:05:38","temperature":"23.062","sensor":"air","_id":"HI0BZq28CwP4I9wO"}
@@ -3874,6 +3885,7 @@
 {"date":"2015-01-16, 12:45:36","temperature":"22.75","sensor":"air","_id":"IgbIoYGb4jCEneBn"}
 {"date":"2014-12-24, 05:14:56","temperature":"22.875","sensor":"air","_id":"IghHTMlVjZRey1HI"}
 {"date":"2015-01-14, 00:54:33","temperature":"22.187","sensor":"air","_id":"Igt8bURdpyFXw7eZ"}
+{"date":"2015-01-20, 01:44:43","value":"21.687","sensor":"termo AIR","_id":"Igz6Qp65hU3NxYSj"}
 {"date":"2015-01-16, 09:50:10","temperature":"22.562","sensor":"air","_id":"Ih5s4MFdsav1ubmA"}
 {"date":"2015-01-16, 08:29:42","temperature":"22.312","sensor":"air","_id":"IhCjOI5r06F1BRmT"}
 {"date":"2015-01-12, 22:31:02","temperature":"22.0","sensor":"air","_id":"IhEXhK76JqXXwMdK"}
@@ -5114,6 +5126,7 @@
 {"date":"2015-01-14, 13:14:06","temperature":"22.812","sensor":"air","_id":"OUii4xI2JHcFtBtC"}
 {"date":"2015-01-15, 00:14:29","temperature":"21.75","sensor":"air","_id":"OUj1OBfpLKxAi3z8"}
 {"date":"2015-01-19, 23:01:05","temperature":"21.5","sensor":"air","_id":"OV0A7fRdnIuNXUG3"}
+{"date":"2015-01-20, 01:44:13","value":"21.625","sensor":"termo AIR","_id":"OVaqba9RJwdciE4I"}
 {"date":"2015-01-16, 08:50:19","temperature":"22.312","sensor":"air","_id":"OViXPUf8RUpn5cET"}
 {"date":"2015-01-04, 16:05:42","temperature":"22.375","sensor":"air","_id":"OVuvZrFkZIkNP5rf"}
 {"date":"2015-01-20, 00:22:18","value":"21.937","sensor":"termo AIR","_id":"OWA9mY6PoHfrfGti"}
@@ -5337,6 +5350,7 @@
 {"date":"2015-01-15, 22:01:38","temperature":"22.25","sensor":"air","_id":"PbNb5KbVFzsCj9Gk"}
 {"date":"2015-01-16, 07:52:30","temperature":"22.375","sensor":"air","_id":"PbeXjb5kOUjfEJpZ"}
 {"date":"2015-01-14, 02:58:45","temperature":"22.312","sensor":"air","_id":"Pd33biaOAQK4thbd"}
+{"date":"2015-01-20, 01:46:44","value":"21.687","sensor":"termo AIR","_id":"PdW1SCDHnOlrs8cK"}
 {"date":"2015-01-13, 23:15:33","temperature":"22.375","sensor":"air","_id":"PdWtxsalYA2oYhhf"}
 {"date":"2014-12-27, 11:47:01","temperature":"21.437","sensor":"air","_id":"PdbgSy41QEAsBbyZ"}
 {"date":"2015-01-16, 01:32:02","temperature":"21.687","sensor":"air","_id":"PdmwOPjOHMUctzOy"}
@@ -5515,9 +5529,11 @@
 {"date":"2015-01-14, 01:33:46","temperature":"21.5","sensor":"air","_id":"QUUkmB2GRVbFypL1"}
 {"date":"2014-12-24, 04:47:19","temperature":"22.937","sensor":"air","_id":"QUtBy9B9mzRNsBwf"}
 {"date":"2015-01-16, 07:38:56","temperature":"22.375","sensor":"air","_id":"QUwAg9FR8PN74753"}
+{"date":"2015-01-20, 01:54:26","value":"21.687","sensor":"termo AIR","_id":"QUyRtg8JKzrWQXKE"}
 {"date":"2015-01-16, 19:02:43","temperature":"22.312","sensor":"air","_id":"QVmNy3nWsymc1oNc"}
 {"date":"2015-01-14, 02:25:03","temperature":"22.25","sensor":"air","_id":"QW25jj8T0Xmnhkqq"}
 {"date":"2014-12-24, 04:32:15","temperature":"23.0","sensor":"air","_id":"QWCGcMNwukPh9MJL"}
+{"date":"2015-01-20, 01:47:14","value":"21.687","sensor":"termo AIR","_id":"QWDJKZ6wTObguz29"}
 {"date":"2015-01-14, 00:59:04","temperature":"22.187","sensor":"air","_id":"QWb40vp7GQrAPtCd"}
 {"date":"2014-12-23, 23:12:22","temperature":"23.062","sensor":"air","_id":"QWf9sxhXDj1kVNiN"}
 {"date":"2014-12-24, 11:03:39","temperature":"22.125","sensor":"air","_id":"QWhO8CQxqD6MPtbo"}
@@ -5698,6 +5714,7 @@
 {"date":"2015-01-16, 05:02:34","temperature":"22.25","sensor":"air","_id":"RMF9QTkASSWdjFXO"}
 {"date":"2015-01-14, 03:29:56","temperature":"22.437","sensor":"air","_id":"RMIA66WYPhdv70QM"}
 {"date":"2014-12-27, 02:35:28","temperature":"21.312","sensor":"air","_id":"RMRkRlxpkpI0W9Ac"}
+{"date":"2015-01-20, 01:43:43","value":"21.687","sensor":"termo AIR","_id":"RMykDbMeWADWZtnR"}
 {"date":"2015-01-16, 14:07:03","temperature":"22.562","sensor":"air","_id":"RN85CKdBwtSfmq9B"}
 {"date":"2015-01-15, 22:29:18","temperature":"22.125","sensor":"air","_id":"RNRxenoivvSsBY7W"}
 {"date":"2015-01-16, 02:28:34","temperature":"22.437","sensor":"air","_id":"RO0inCTtQCceSfKb"}
@@ -5990,6 +6007,7 @@
 {"date":"2014-12-24, 06:15:13","temperature":"22.75","sensor":"air","_id":"SmeYrj8T4mlFgYvq"}
 {"date":"2015-01-16, 13:11:15","temperature":"22.687","sensor":"air","_id":"SmeuViZFvlqy9F5Z"}
 {"date":"2015-01-14, 15:30:48","temperature":"22.437","sensor":"air","_id":"SmrZP8Lj0KepjlH6"}
+{"date":"2015-01-20, 01:54:26","value":"21.687","sensor":"termo AIR","_id":"SmsKY46sWPlMqTn7"}
 {"date":"2014-12-24, 11:46:22","temperature":"22.312","sensor":"air","_id":"Sn3N6xhkFRWcTFNa"}
 {"date":"2015-01-04, 11:00:42","temperature":"21.687","sensor":"air","_id":"SnGTSrLYaUpne3aq"}
 {"date":"2015-01-16, 03:37:36","temperature":"22.062","sensor":"air","_id":"SncEfEyeUlqC5j7G"}
@@ -6759,6 +6777,7 @@
 {"date":"2015-01-16, 14:49:46","temperature":"22.5","sensor":"air","_id":"WWRCQFGG7ZqEMlLw"}
 {"date":"2014-12-24, 10:28:59","temperature":"22.375","sensor":"air","_id":"WWuJuQgGoHr3nwJE"}
 {"date":"2014-12-24, 02:45:17","temperature":"23.5","sensor":"air","_id":"WWzM8w4Mw68jJPr4"}
+{"date":"2015-01-20, 01:53:55","value":"21.687","sensor":"termo AIR","_id":"WYa6FlVQOWe88mG1"}
 {"date":"2014-12-26, 21:56:31","temperature":"21.5","sensor":"air","_id":"WZScCqoac5o8GznP"}
 {"date":"2015-01-19, 19:19:25","temperature":"18.437","sensor":"air","_id":"WZaLHHyG9DouYug2"}
 {"date":"2015-01-14, 09:37:59","temperature":"22.25","sensor":"air","_id":"WZmY2gEeb4ZMeJ31"}
@@ -7495,6 +7514,7 @@
 {"date":"2014-12-24, 16:48:58","temperature":"27.062","sensor":"air","_id":"a2t9HsEJY7dnwMiJ"}
 {"date":"2014-12-27, 06:27:01","temperature":"20.875","sensor":"air","_id":"a3Attb9d5cozhuSD"}
 {"date":"2014-12-24, 10:45:34","temperature":"22.125","sensor":"air","_id":"a3CPCOjscfC6cpUw"}
+{"date":"2015-01-20, 01:43:13","value":"21.562","sensor":"termo AIR","_id":"a3d9VP8puvBPM8go"}
 {"date":"2015-01-16, 00:23:29","temperature":"21.562","sensor":"air","_id":"a4EGsW98npS35mbR"}
 {"date":"2014-12-27, 01:11:02","temperature":"21.812","sensor":"air","_id":"a4UFAKOMp8aXfsn3"}
 {"date":"2014-12-24, 08:50:28","temperature":"22.5","sensor":"air","_id":"a4WLC8Mx2eToONr0"}
@@ -7694,6 +7714,7 @@
 {"date":"2015-01-14, 08:25:35","temperature":"22.562","sensor":"air","_id":"avbO5wuq6YTBWdBL"}
 {"date":"2014-12-27, 08:29:35","temperature":"20.75","sensor":"air","_id":"awMA8IDdvdMglrXU"}
 {"date":"2014-12-27, 12:25:12","temperature":"21.5","sensor":"air","_id":"awh84UGatIpPMXHG"}
+{"date":"2015-01-20, 01:41:12","value":"21.562","sensor":"termo AIR","_id":"awshasK12Lf7uNb3"}
 {"date":"2014-12-24, 07:32:35","temperature":"22.625","sensor":"air","_id":"ax96PpWDIOsMOYa9"}
 {"date":"2015-01-19, 21:37:10","temperature":"20.75","sensor":"air","_id":"axW4TWLlRoAX0iR3"}
 {"date":"2015-01-13, 20:22:26","temperature":"22.625","sensor":"air","_id":"axePlla1G7FGbsdA"}
@@ -7701,6 +7722,7 @@
 {"date":"2015-01-14, 18:18:10","temperature":"22.562","sensor":"air","_id":"az3LWtOZQh1AWnXs"}
 {"date":"2015-01-16, 13:56:29","temperature":"22.625","sensor":"air","_id":"azA9QQMPk97SptXz"}
 {"date":"2014-12-24, 08:37:24","temperature":"22.562","sensor":"air","_id":"azGhp3C8vFGBS49P"}
+{"date":"2015-01-20, 01:42:13","value":"21.625","sensor":"termo AIR","_id":"azQ5385XJc3CLsAs"}
 {"date":"2014-12-23, 21:22:50","temperature":"23.437","sensor":"air","_id":"azRPpIsgA7q9LsWn"}
 {"date":"2015-01-14, 04:32:48","temperature":"22.562","sensor":"air","_id":"azi41qL2S0I2FtTV"}
 {"date":"2014-12-27, 09:57:31","temperature":"20.812","sensor":"air","_id":"azuYTONScdoNAdEo"}
@@ -7834,6 +7856,7 @@
 {"date":"2015-01-04, 12:42:11","temperature":"22.187","sensor":"air","_id":"bbBmUhp4aU7XQplr"}
 {"date":"2015-01-13, 21:24:36","temperature":"21.125","sensor":"air","_id":"bbQYXr6VbY6rPtOz"}
 {"date":"2015-01-13, 22:02:47","temperature":"22.25","sensor":"air","_id":"bboQfJIJPt8jX4A6"}
+{"date":"2015-01-20, 01:47:45","value":"21.687","sensor":"termo AIR","_id":"bbqfaNh528qYQ4Qp"}
 {"date":"2015-01-14, 15:04:40","temperature":"22.5","sensor":"air","_id":"bc8aeBk7xvfQ5Hsu"}
 {"date":"2014-12-24, 18:11:13","temperature":"23.437","sensor":"air","_id":"bcl5A8sGMUvEat9t"}
 {"date":"2015-01-13, 23:30:08","temperature":"22.312","sensor":"air","_id":"bcxJQ8l17qVd3i1d"}
@@ -7881,6 +7904,7 @@
 {"date":"2015-01-16, 18:56:10","temperature":"22.312","sensor":"air","_id":"bo15xHrwn719iAgR"}
 {"date":"2014-12-27, 00:52:26","temperature":"22.0","sensor":"air","_id":"bo60vSExHWCGWPMm"}
 {"date":"2015-01-20, 00:32:52","value":"21.062","sensor":"termo AIR","_id":"boHB8W6SxMWLyDO9"}
+{"date":"2015-01-20, 01:44:13","value":"21.625","sensor":"termo AIR","_id":"boPDlX5v8MnSyZxb"}
 {"date":"2015-01-14, 04:37:50","temperature":"22.5","sensor":"air","_id":"boUNRLwp4SW7fNC9"}
 {"date":"2015-01-16, 01:52:14","temperature":"22.0","sensor":"air","_id":"boqjRMg93zVm9CuD"}
 {"date":"2014-12-27, 08:24:04","temperature":"20.75","sensor":"air","_id":"bpsov2Ec1wTwV6LI"}
@@ -8241,6 +8265,7 @@
 {"date":"2015-01-04, 07:30:13","temperature":"21.187","sensor":"air","_id":"dfKt0hsxYWXCFGAy"}
 {"date":"2014-12-24, 12:52:43","temperature":"22.562","sensor":"air","_id":"dfkCEqgMp4mV9nMO"}
 {"date":"2015-01-19, 22:50:32","temperature":"21.437","sensor":"air","_id":"dgpS1HmsvtcBBrVR"}
+{"date":"2015-01-20, 01:43:13","value":"21.562","sensor":"termo AIR","_id":"dgpa9HmhnYoNb7MF"}
 {"date":"2014-12-24, 20:05:36","temperature":"23.062","sensor":"air","_id":"dgqQhKJHrGernZQ0"}
 {"date":"2015-01-14, 01:24:13","temperature":"22.375","sensor":"air","_id":"dgt7KjPB4h9UvdT6"}
 {"date":"2014-12-23, 21:34:55","temperature":"23.375","sensor":"air","_id":"dgvEac8WytM81Ffo"}
@@ -8442,6 +8467,7 @@
 {"date":"2015-01-13, 22:47:25","temperature":"22.25","sensor":"air","_id":"ehLCiTYCbatiONbX"}
 {"date":"2014-12-24, 18:09:43","temperature":"23.437","sensor":"air","_id":"ehgYYAPPV2n4rkcU"}
 {"date":"2015-01-15, 23:55:18","temperature":"22.312","sensor":"air","_id":"eiRG2X6Ew72izrEV"}
+{"date":"2015-01-20, 01:53:55","value":"21.687","sensor":"termo AIR","_id":"eib9XcA4pLkAm6Lh"}
 {"date":"2015-01-15, 23:00:00","temperature":"21.812","sensor":"air","_id":"ejdkjfAkVsr8g34z"}
 {"date":"2014-12-26, 22:42:46","temperature":"21.687","sensor":"air","_id":"ejf9yr9gaNWez8jN"}
 {"date":"2014-12-27, 02:49:32","temperature":"21.25","sensor":"air","_id":"ejos423D33Btu1I0"}
@@ -8739,6 +8765,7 @@
 {"date":"2015-01-16, 07:31:53","temperature":"22.375","sensor":"air","_id":"gDInwEdSddG0UCbH"}
 {"date":"2015-01-14, 09:15:21","temperature":"22.625","sensor":"air","_id":"gDOONLV6JtncOJu8"}
 {"date":"2015-01-12, 22:42:07","temperature":"22.125","sensor":"air","_id":"gELCs2wPgGGXzeFf"}
+{"date":"2015-01-20, 01:41:12","value":"21.562","sensor":"termo AIR","_id":"gEPmBnxBbCTTpSbn"}
 {"date":"2014-12-27, 08:36:07","temperature":"20.75","sensor":"air","_id":"gEc7klO14eXVTTrs"}
 {"date":"2015-01-20, 00:13:15","value":"21.812","sensor":"termo AIR","_id":"gEkUWP3CZHJQq9MO"}
 {"date":"2014-12-24, 03:21:56","temperature":"23.25","sensor":"air","_id":"gEtHtFF0IPURhoct"}
@@ -9271,6 +9298,7 @@
 {"date":"2015-01-20, 00:32:22","value":"21.0","sensor":"termo AIR","_id":"iYeeQpJrWts7l9FB"}
 {"date":"2015-01-16, 12:19:58","temperature":"22.75","sensor":"air","_id":"iYqi4sAJTbD2ifwJ"}
 {"date":"2014-12-24, 19:13:25","temperature":"23.187","sensor":"air","_id":"iZ2vMng4nyCgCwUJ"}
+{"date":"2015-01-20, 01:45:14","value":"21.625","sensor":"termo AIR","_id":"iZH5xJPdAwmXsFq3"}
 {"date":"2015-01-14, 06:24:55","temperature":"22.5","sensor":"air","_id":"iZN5aPeSwXb5JET3"}
 {"date":"2015-01-14, 00:51:32","temperature":"22.125","sensor":"air","_id":"iZd9CjjOpqzbXLlG"}
 {"date":"2015-01-16, 21:48:44","temperature":"21.875","sensor":"air","_id":"iZeSJnY3l516ZkqI"}
@@ -9902,6 +9930,7 @@
 {"date":"2015-01-14, 02:26:04","temperature":"22.187","sensor":"air","_id":"lc1fdz11DdXcDh7Y"}
 {"date":"2015-01-16, 17:02:00","temperature":"22.437","sensor":"air","_id":"lca2B8rae5Pyr5t6"}
 {"date":"2015-01-16, 18:19:27","temperature":"22.375","sensor":"air","_id":"lcbZP7wzBSsJdBrR"}
+{"date":"2015-01-20, 01:50:08","value":"21.687","sensor":"termo AIR","_id":"lcwcBbGDy36kRray"}
 {"date":"2015-01-16, 13:42:55","temperature":"22.625","sensor":"air","_id":"ld5BQ47n7l4qy0RK"}
 {"date":"2014-12-27, 04:08:30","temperature":"21.125","sensor":"air","_id":"ldDokKTksGDBmq3a"}
 {"date":"2014-12-24, 01:36:30","temperature":"23.187","sensor":"air","_id":"ldVbu9NmrQf8mUs4"}
@@ -10009,6 +10038,7 @@
 {"date":"2015-01-14, 04:59:57","temperature":"22.562","sensor":"air","_id":"m4jtmyD3aJUBOxqx"}
 {"date":"2014-12-27, 06:49:07","temperature":"20.875","sensor":"air","_id":"m4ptaRKff4feJIlP"}
 {"date":"2014-12-23, 22:13:05","temperature":"23.25","sensor":"air","_id":"m5IGxqmXw6Lm0mR5"}
+{"date":"2015-01-20, 01:48:27","value":"21.687","sensor":"termo AIR","_id":"m5bDhozNSAZuMSJ8"}
 {"date":"2015-01-14, 11:53:42","temperature":"23.062","sensor":"air","_id":"m5eEeqK8ZRh3I3kL"}
 {"date":"2015-01-16, 10:43:58","temperature":"22.75","sensor":"air","_id":"m5eng5LGUINduPRw"}
 {"date":"2015-01-14, 09:18:22","temperature":"22.625","sensor":"air","_id":"m5oWEkQBRbyFZY0A"}
@@ -10182,6 +10212,7 @@
 {"date":"2014-12-27, 08:19:32","temperature":"20.75","sensor":"air","_id":"mpYGVR3eObnLFuEt"}
 {"date":"2014-12-24, 15:24:03","temperature":"23.0","sensor":"air","_id":"mqO0yP8DpoFd3fim"}
 {"date":"2015-01-14, 03:39:29","temperature":"22.437","sensor":"air","_id":"mrA7It7Xs79Hbj8n"}
+{"date":"2015-01-20, 01:41:43","value":"21.562","sensor":"termo AIR","_id":"mrg4tdB8ck8WkSvP"}
 {"date":"2014-12-24, 02:58:51","temperature":"23.375","sensor":"air","_id":"msjZNIAqiKLzdUDh"}
 {"date":"2015-01-16, 05:38:46","temperature":"22.375","sensor":"air","_id":"mu4Sg3SsIfXxuV5m"}
 {"date":"2015-01-04, 08:07:53","temperature":"21.125","sensor":"air","_id":"mu8ZtTCMZIeYrgho"}
@@ -10268,6 +10299,7 @@
 {"date":"2015-01-15, 23:26:08","temperature":"22.062","sensor":"air","_id":"nJ7K3WvJUK7XI7Pz"}
 {"date":"2014-12-27, 08:54:43","temperature":"20.75","sensor":"air","_id":"nJQdqpZGB25PvlHu"}
 {"date":"2015-01-15, 23:24:38","temperature":"22.062","sensor":"air","_id":"nJbIkZFM18YGjhXB"}
+{"date":"2015-01-20, 01:43:43","value":"21.687","sensor":"termo AIR","_id":"nJpCitYcSTju1pc4"}
 {"date":"2015-01-16, 17:58:50","temperature":"22.437","sensor":"air","_id":"nJsP7F6ybiYTHb3Q"}
 {"date":"2014-12-24, 13:10:49","temperature":"22.437","sensor":"air","_id":"nK4UOdYbzmAj1nRy"}
 {"date":"2015-01-16, 18:01:21","temperature":"22.375","sensor":"air","_id":"nKrtrn1vpf8xCQqZ"}
@@ -11037,6 +11069,7 @@
 {"date":"2014-12-24, 04:41:47","temperature":"22.937","sensor":"air","_id":"quGhDdMq8QnPam4w"}
 {"date":"2014-12-27, 00:59:28","temperature":"22.0","sensor":"air","_id":"quKiJi81XWO2i7yx"}
 {"date":"2015-01-14, 10:26:46","temperature":"22.625","sensor":"air","_id":"quQSKrZXsEUlWO6E"}
+{"date":"2015-01-20, 01:42:43","value":"21.562","sensor":"termo AIR","_id":"quSWZZYI1Fik4XIf"}
 {"date":"2014-12-24, 10:52:06","temperature":"22.125","sensor":"air","_id":"quruKk6YW0niOcIu"}
 {"date":"2015-01-13, 20:13:33","temperature":"22.562","sensor":"air","_id":"qvCsv9XBdlRN6kEC"}
 {"date":"2015-01-16, 23:13:15","temperature":"21.875","sensor":"air","_id":"qvFaJXb7IJZORjZS"}
@@ -11236,6 +11269,7 @@
 {"date":"2015-01-14, 01:34:16","temperature":"21.562","sensor":"air","_id":"rp1NaVlqVoanlVRE"}
 {"date":"2015-01-16, 02:01:48","temperature":"22.062","sensor":"air","_id":"rp34b9GhhyuZgaQc"}
 {"date":"2014-12-24, 03:54:05","temperature":"23.125","sensor":"air","_id":"rp4Qk6hTKnAIudoU"}
+{"date":"2015-01-20, 01:42:43","value":"21.562","sensor":"termo AIR","_id":"rpO9ORF6IrzOTip9"}
 {"date":"2014-12-27, 02:20:23","temperature":"21.375","sensor":"air","_id":"rpjTBaUZyv6LRwFs"}
 {"date":"2014-12-27, 09:06:46","temperature":"20.75","sensor":"air","_id":"rq0gZuowhulO2X0H"}
 {"date":"2015-01-20, 01:11:04","value":"21.75","sensor":"termo AIR","_id":"rq7IuVfkirv5YwnF"}
@@ -11433,6 +11467,7 @@
 {"date":"2015-01-14, 01:17:41","temperature":"22.312","sensor":"air","_id":"sgDDce3S0TYchl4b"}
 {"date":"2015-01-14, 13:08:04","temperature":"22.812","sensor":"air","_id":"sgEc1IcQ9I3IkTJX"}
 {"date":"2014-12-24, 03:01:21","temperature":"23.312","sensor":"air","_id":"sh4zSR5qWtCJhVDU"}
+{"date":"2015-01-20, 01:45:44","value":"21.625","sensor":"termo AIR","_id":"sh9zpypTYsIdUW5H"}
 {"date":"2015-01-16, 06:02:24","temperature":"22.375","sensor":"air","_id":"shMXW8gNS9WWuhXL"}
 {"date":"2015-01-13, 01:05:54","temperature":"22.25","sensor":"air","_id":"shn71YZODBpxmElS"}
 {"date":"2014-12-24, 09:47:46","temperature":"22.625","sensor":"air","_id":"sixN7nlH40w3tAgS"}
@@ -11857,6 +11892,7 @@
 {"date":"2014-12-24, 19:50:03","temperature":"23.125","sensor":"air","_id":"ul8DJae6fDZs1Emo"}
 {"date":"2015-01-14, 17:00:16","temperature":"22.5","sensor":"air","_id":"umIPSKgTYJcXo6WH"}
 {"date":"2015-01-14, 15:51:24","temperature":"22.437","sensor":"air","_id":"umSS1EVid0kCge3u"}
+{"date":"2015-01-20, 01:45:44","value":"21.625","sensor":"termo AIR","_id":"umd13OzLKXvcLmrI"}
 {"date":"2015-01-19, 21:40:41","temperature":"20.062","sensor":"air","_id":"umuDDvhzdNNamE8M"}
 {"date":"2015-01-14, 08:36:09","temperature":"22.562","sensor":"air","_id":"unSvan4KHDbAdUMT"}
 {"date":"2015-01-16, 12:30:32","temperature":"22.75","sensor":"air","_id":"unWbo2q0qdDSGKXW"}
@@ -12948,21 +12984,5 @@
 {"date":"2015-01-04, 14:05:05","temperature":"22.187","sensor":"air","_id":"zzZU3hxPph3GpDLl"}
 {"date":"2015-01-04, 09:51:22","temperature":"20.937","sensor":"air","_id":"zzwfwaiyANM9OPIz"}
 {"date":"2015-01-04, 11:15:16","temperature":"21.812","sensor":"air","_id":"zzywmslOEyVArUw8"}
-{"date":"2015-01-20, 01:41:12","value":"21.562","sensor":"termo AIR","_id":"gEPmBnxBbCTTpSbn"}
-{"date":"2015-01-20, 01:41:12","value":"21.562","sensor":"termo AIR","_id":"awshasK12Lf7uNb3"}
-{"date":"2015-01-20, 01:41:43","value":"21.562","sensor":"termo AIR","_id":"CTr1GToPxOx9nzIM"}
-{"date":"2015-01-20, 01:41:43","value":"21.562","sensor":"termo AIR","_id":"mrg4tdB8ck8WkSvP"}
-{"date":"2015-01-20, 01:42:13","value":"21.625","sensor":"termo AIR","_id":"azQ5385XJc3CLsAs"}
-{"date":"2015-01-20, 01:42:13","value":"21.625","sensor":"termo AIR","_id":"7xnu9mN1Nc8jjSrv"}
-{"date":"2015-01-20, 01:42:43","value":"21.562","sensor":"termo AIR","_id":"quSWZZYI1Fik4XIf"}
-{"date":"2015-01-20, 01:42:43","value":"21.562","sensor":"termo AIR","_id":"rpO9ORF6IrzOTip9"}
-{"date":"2015-01-20, 01:43:13","value":"21.562","sensor":"termo AIR","_id":"dgpa9HmhnYoNb7MF"}
-{"date":"2015-01-20, 01:43:13","value":"21.562","sensor":"termo AIR","_id":"a3d9VP8puvBPM8go"}
-{"date":"2015-01-20, 01:43:43","value":"21.687","sensor":"termo AIR","_id":"nJpCitYcSTju1pc4"}
-{"date":"2015-01-20, 01:43:43","value":"21.687","sensor":"termo AIR","_id":"RMykDbMeWADWZtnR"}
-{"date":"2015-01-20, 01:44:13","value":"21.625","sensor":"termo AIR","_id":"OVaqba9RJwdciE4I"}
-{"date":"2015-01-20, 01:44:13","value":"21.625","sensor":"termo AIR","_id":"boPDlX5v8MnSyZxb"}
-{"date":"2015-01-20, 01:44:43","value":"21.687","sensor":"termo AIR","_id":"7Zb3ebbmnhqDqqH2"}
-{"date":"2015-01-20, 01:44:43","value":"21.687","sensor":"termo AIR","_id":"Igz6Qp65hU3NxYSj"}
-{"date":"2015-01-20, 01:45:14","value":"21.625","sensor":"termo AIR","_id":"iZH5xJPdAwmXsFq3"}
-{"date":"2015-01-20, 01:45:14","value":"21.625","sensor":"termo AIR","_id":"GpNZmih3qdbRAXfN"}
+{"date":"2015-01-20, 01:56:42","value":"21.75","sensor":"termo AIR","_id":"vzKgXrDjfYIISh5m"}
+{"date":"2015-01-20, 01:56:42","value":"21.75","sensor":"termo AIR","_id":"E9PlJOH8jfKxElis"}
