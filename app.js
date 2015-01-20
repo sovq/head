@@ -13,9 +13,11 @@ var Nedb = require('nedb')
 var temperatureDB = new Nedb({ filename: runDirectory+'/db/temperature.db', autoload: true });
 var lightswitchlogDB = new Nedb({ filename: runDirectory+'/db/ligthswitchlog.db', autoload: true });
 var moistureDB = new Nedb({ filename: runDirectory+'/db/moisture.db', autoload: true });
-	
+var configDB = 	new Nedb({ filename: runDirectory+'/db/config.db', autoload: true })
+var sunsetDB = 	new Nedb({ filename: runDirectory+'/db/sunset.db', autoload: true })
+
 var express = require('express')
-  , routes = require('./routes')({tempDB:temperatureDB,lightSwitchLogDB:lightswitchlogDB})
+  , routes = require('./routes')({tempDB:temperatureDB,lightSwitchLogDB:lightswitchlogDB,sunsetDB:sunsetDB})
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -65,7 +67,7 @@ var ooswitch = require('ooswitch');
 var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py',lightswitchlogDB);
 var lightschedule = require('lightschedule');
 
-var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent)
+var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,configDB,sunsetDB)
 scheduler.checkStatus();
 
 var sensor = require('sensor');

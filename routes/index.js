@@ -6,6 +6,7 @@
 function routes(params){
 	var tempDB = params.tempDB;
 	var lightSwitchLogDB = params.lightSwitchLogDB;
+	var sunsetDB = params.sunsetDB;
 	var dateFormat = require('dateformat');
 	var tempUtils = require('./temperature');
 
@@ -15,8 +16,7 @@ function routes(params){
   
 	this.lightinfo = function(req,res){
 		var date = req.params.date;
-		var Nedb = require('nedb')
-		sun = new Nedb({ filename: '/home/pi/greenhouse/sunset.db', autoload: true });
+		sun = sunsetDB;
 		
 		var lightingList = [];
 
