@@ -17,8 +17,11 @@ GreenHouseApp.config(['$routeProvider', function($routeProvider) {
 		  templateUrl: 'partials/logs',
 //		  controller: 'LogsDisplayController'		  
 	  }).
+      when('/404',{
+		   templateUrl: 'partials/404',
+	  }).
       otherwise({
-        redirectTo: 'partials/404'
+        redirectTo: '404'
       });
 }]);
 
