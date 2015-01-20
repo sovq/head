@@ -2,12 +2,23 @@
  *	Configuration
  */
  
-var dummyDevices = false;
+var dummyDevices = false; // false if sensors are plugged
 var runDirectory = '/home/pi/greenhouse';
 
 /*
- *  Database
- * */
+ * End of configuration
+ */
+
+var dummyDevicePrefix = 'dummy_';
+
+if(!dummyDevices){
+	dummyDevicePrefix = "";
+}
+
+/*
+ *  Database config
+ * 
+ */
 
 var Nedb = require('nedb')
 var temperatureDB = new Nedb({ filename: runDirectory+'/db/temperature.db', autoload: true });
@@ -16,8 +27,12 @@ var moistureDB = new Nedb({ filename: runDirectory+'/db/moisture.db', autoload: 
 var configDB = 	new Nedb({ filename: runDirectory+'/db/config.db', autoload: true })
 var sunsetDB = 	new Nedb({ filename: runDirectory+'/db/sunset.db', autoload: true })
 
+var databases = 	{tempDB:temperatureDB,
+					lightSwitchLogDB:lightswitchlogDB,
+					sunsetDB:sunsetDB}
+
 var express = require('express')
-  , routes = require('./routes')({tempDB:temperatureDB,lightSwitchLogDB:lightswitchlogDB,sunsetDB:sunsetDB})
+  , routes = require('./routes')(databases)
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -49,7 +64,7 @@ app.get('/partials/:name', function (req, res)
    res.render('partials/' + name);
 });
 app.get('/lightinfo/:date', routes.lightinfo);
-app.get('/lightswitchlog', routes.lightswitchlog);
+app.get('/lightswitchlog/date/:date/direction/:direction', routes.lightswitchlog);
 app.get('/temperature/start/:start/end/:end', routes.temperature)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
@@ -65,15 +80,16 @@ ioEvent = new EventEmitter();
 
 var ooswitch = require('ooswitch');
 var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py',lightswitchlogDB);
+//var velve = new
 var lightschedule = require('lightschedule');
 
 var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,configDB,sunsetDB)
 scheduler.checkStatus();
 
 var sensor = require('sensor');
-var  temperatureSensor = new sensor('python '+runDirectory+'/python/termometer.py','termo AIR',temperatureDB,30000);
+var  temperatureSensor = new sensor('python '+runDirectory+'/python/'+dummyDevicePrefix+'termometer.py','termo AIR',temperatureDB,30000);
 temperatureSensor.enable();
-var moistureSensor = new sensor('sudo python '+runDirectory+'/python/moisture.py 16','moisture',moistureDB,3600000);
+var moistureSensor = new sensor('sudo python '+runDirectory+'/python/'+dummyDevicePrefix+'soilmoisturemeter.py 16','moisture',moistureDB,1800000);
 moistureSensor.enable();
 
 io.on('connection', function (socket) {

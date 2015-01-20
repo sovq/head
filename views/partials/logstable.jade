@@ -1,0 +1,23 @@
+table(class='table')
+ thead
+  tr
+   th
+    a(href='' ng-click='moveLog("up")')
+     i.fa.fa-angle-up.fa-2x
+   th date
+   th toggle
+   th source
+ tbody
+  tr(ng-repeat='(index,value) in logdata') 
+   th(scope='row')
+    td {{value.date}}
+    td {{value.toggle}}
+    td {{value.origin}}
+  tr
+   th 
+    a(href='' ng-click='moveLog("down")')
+     i.fa.fa-angle-down.fa-2x
+   th 
+   th 
+   th 
+  

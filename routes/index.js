@@ -80,8 +80,19 @@ function routes(params){
 	}
 	
 	this.lightswitchlog = function(req,res){
+		var startDate = req.params.date;
+		var direction = req.params.direction;
+		
+		var query = null;
+		console.log("start date: "+startDate);
+		if(direction=='up'){
+			query = {date:{$gte:startDate}}
+		}else if(direction=='down'){
+			query = {date:{$lte:startDate}}
+		}
+		
 		var resultsArray = [];
-		lightSwitchLogDB.find({}).sort({date:-1}).exec(function(err,docs){
+		lightSwitchLogDB.find(query).sort({date:-1}).limit(10).exec(function(err,docs){
 			for(i=0;i<docs.length;i++){
 				var doc = docs[i];
 				resultsArray.push({
@@ -91,6 +102,7 @@ function routes(params){
 				});
 			}
 			var json = JSON.stringify(resultsArray); 
+			//console.log(json);
 			res.end(json);
 		});	
 	}

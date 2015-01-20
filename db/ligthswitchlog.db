@@ -17,6 +17,7 @@
 {"date":"2014-12-23, 21:16:25","toggle":"off","origin":"scheduler","_id":"2AvcGx6nHSWRRRNY"}
 {"date":"2014-12-22, 19:42:10","toggle":"on","origin":"scheduler","_id":"2IviWmAHWiDECeNc"}
 {"date":"2014-12-22, 19:34:53","toggle":"on","origin":"scheduler","_id":"2JDibyuhUXPDWgRK"}
+{"date":"2015-01-20, 01:56:42","toggle":"on","origin":"switch by web","_id":"2Qev4E6i9s8NUwT2"}
 {"date":"2015-01-04, 06:42:35","toggle":"off","origin":"scheduler","_id":"2gSA0QiDeHoi0wBr"}
 {"date":"2015-01-16, 16:10:53","toggle":"on","origin":"scheduler","_id":"2jFvqFTQb3uYNLjZ"}
 {"date":"2014-12-22, 19:50:36","toggle":"on","origin":"connection status","_id":"2kAYR7nBzQeCGcbx"}
@@ -56,11 +57,13 @@
 {"date":"2014-12-22, 19:06:31","toggle":"on","origin":"scheduler","_id":"6eiqiMU6bfdppdCJ"}
 {"date":"2014-12-27, 04:33:52","toggle":"off","origin":"connection status","_id":"6jOwumccTgJqlbfm"}
 {"date":"2014-12-22, 19:11:22","toggle":"on","origin":"connection status","_id":"6l41RbwSoT9p56BJ"}
+{"date":"2015-01-21, 00:34:16","toggle":"off","origin":"scheduler","_id":"6mI982rCigA8kbZe"}
 {"date":"2014-12-22, 19:14:09","toggle":"on","origin":"scheduler","_id":"6o5vaoi6s9j5pBlD"}
 {"date":"2014-12-27, 04:05:14","toggle":"off","origin":"scheduler","_id":"6qPc3Tu7JyP6RZOh"}
 {"date":"2014-12-22, 20:14:25","toggle":"on","origin":"scheduler","_id":"6r80p85HCYJ7PaiM"}
 {"date":"2014-12-27, 03:55:04","toggle":"on","origin":"switch by web","_id":"6rtSIsjmTaXruY9m"}
 {"date":"2014-12-22, 05:34:36","toggle":"on","origin":"connection status","_id":"6uTQkcnkR5UaPgmR"}
+{"date":"2015-01-20, 01:56:44","toggle":"on","origin":"switch by web","_id":"7ByuGO0cPnHy1IlN"}
 {"date":"2014-12-22, 19:50:57","toggle":"on","origin":"scheduler","_id":"7JwKyV17FMOo8sHK"}
 {"date":"2014-12-27, 03:54:41","toggle":"off","origin":"switch by web","_id":"7QlOHuiS4J3658gX"}
 {"date":"2014-12-20, 18:44:11","toggle":"on","origin":"connection status","_id":"7ZLcGLhB96JUjn78"}
@@ -74,10 +77,12 @@
 {"date":"2014-12-22, 19:34:19","toggle":"on","origin":"scheduler","_id":"84VCjfLdUepuAPgH"}
 {"date":"2014-12-22, 05:49:40","toggle":"on","origin":"connection status","_id":"85IkTGbA4r2FNN0T"}
 {"date":"2014-12-24, 16:39:57","toggle":"off","origin":"connection status","_id":"8F9PbPdoz12VKl9D"}
+{"date":"2015-01-20, 16:16:32","toggle":"on","origin":"scheduler","_id":"8MKoSeh6jAl3hgjH"}
 {"date":"2014-12-22, 19:10:22","toggle":"on","origin":"scheduler","_id":"8SHT63vSTOFt1dvY"}
 {"date":"2014-12-27, 05:20:50","toggle":"on","origin":"scheduler","_id":"8Ub7fWFikWoRX87i"}
 {"date":"2014-12-22, 18:46:33","toggle":"on","origin":"scheduler","_id":"8XTC8VfSe6IpEECW"}
 {"date":"2015-01-13, 22:28:20","toggle":"off","origin":"scheduler","_id":"8mWpZNlaidSCVAWs"}
+{"date":"2015-01-21, 00:30:18","toggle":"off","origin":"scheduler","_id":"8vi8nfGj8wA8UY5L"}
 {"date":"2014-12-22, 05:26:30","toggle":"on","origin":"connection status","_id":"9TPVxLRNHk3FOKyq"}
 {"date":"2015-01-12, 22:53:53","toggle":"off","origin":"switch by web","_id":"9dfwSWmCF4wfqKoX"}
 {"date":"2014-12-27, 04:05:14","toggle":"off","origin":"scheduler","_id":"9jHrj6k4HakezuJG"}
@@ -100,6 +105,7 @@
 {"date":"2014-12-23, 03:10:07","toggle":"off","origin":"scheduler","_id":"BeJva9iRbEnyj4A1"}
 {"date":"2015-01-13, 02:06:15","toggle":"off","origin":"scheduler","_id":"BqBFoRUlhnKtuhho"}
 {"date":"2014-12-22, 19:33:07","toggle":"on","origin":"scheduler","_id":"BsPFfkzGIa11MHW0"}
+{"date":"2015-01-20, 21:00:32","toggle":"off","origin":"scheduler","_id":"BuxWUqKZONzFeujN"}
 {"date":"2014-12-22, 19:06:30","toggle":"on","origin":"connection status","_id":"C72PVcvLEYAVLveq"}
 {"date":"2014-12-27, 04:57:25","toggle":"on","origin":"scheduler","_id":"C78B0oobDnCBUYff"}
 {"date":"2014-12-22, 19:51:58","toggle":"on","origin":"scheduler","_id":"C7MLm1DoFNtvp560"}
@@ -141,6 +147,7 @@
 {"date":"2014-12-22, 06:07:27","toggle":"off","origin":"scheduler","_id":"G19Xm7XIzYP5hprS"}
 {"date":"2015-01-12, 21:57:03","toggle":"off","origin":"scheduler","_id":"G3WKenKULHREKthW"}
 {"date":"2014-12-22, 19:11:49","toggle":"on","origin":"scheduler","_id":"G7ZBqP0kTGBDzwZc"}
+{"date":"2015-01-20, 23:22:21","toggle":"off","origin":"scheduler","_id":"G7pECcjiJVfsRvhx"}
 {"date":"2014-12-24, 16:37:38","toggle":"on","origin":"switch by web","_id":"GY4pAITvhbe2ruuj"}
 {"date":"2014-12-20, 19:06:09","toggle":"on","origin":"connection status","_id":"GxXjsYFpQSB7YCv4"}
 {"date":"2014-12-20, 18:47:15","toggle":"on","origin":"connection status","_id":"GztjC7k2XCrpIySg"}
@@ -180,6 +187,7 @@
 {"date":"2014-12-22, 19:26:01","toggle":"on","origin":"connection status","_id":"L8B4c9aSRpllOj1D"}
 {"date":"2014-12-23, 21:17:21","toggle":"off","origin":"connection status","_id":"LAVHmDiRsTagoxrY"}
 {"date":"2014-12-23, 03:10:07","toggle":"off","origin":"scheduler","_id":"LgMFqcs3z9pXOIlH"}
+{"date":"2015-01-21, 00:20:45","toggle":"off","origin":"scheduler","_id":"Li65KYyvA30GSoBS"}
 {"date":"2014-12-27, 04:05:14","toggle":"off","origin":"scheduler","_id":"Lir1aQyfR7gmfrhM"}
 {"date":"2014-12-20, 18:41:29","toggle":"on","origin":"connection status","_id":"LtCH4R59q3f6hXC1"}
 {"date":"2014-12-22, 20:14:25","toggle":"on","origin":"scheduler","_id":"MEN2opGMHMRk5oXh"}
@@ -212,6 +220,7 @@
 {"date":"2015-01-20, 01:54:14","toggle":"on","origin":"switch by web","_id":"P7bc1jLi30RpIewG"}
 {"date":"2014-12-22, 18:05:11","toggle":"on","origin":"connection status","_id":"P7pK4IChFSE251oD"}
 {"date":"2014-12-22, 19:09:39","toggle":"on","origin":"connection status","_id":"PDIYStuya4A0x92g"}
+{"date":"2015-01-20, 22:15:29","toggle":"off","origin":"connection status","_id":"PG55JtRRI4tDoJid"}
 {"date":"2014-12-22, 20:14:25","toggle":"on","origin":"scheduler","_id":"POtxQilId7noTOyW"}
 {"date":"2015-01-15, 00:08:16","toggle":"off","origin":"scheduler","_id":"PVo0fg1xjajGA2qR"}
 {"date":"2014-12-24, 16:32:59","toggle":"off","origin":"switch by web","_id":"PaU6AOfSdGOkU7Ym"}
@@ -261,6 +270,7 @@
 {"date":"2014-12-23, 21:16:27","toggle":"off","origin":"connection status","_id":"UkACTpyvAKlraTMX"}
 {"date":"2015-01-16, 00:42:53","toggle":"off","origin":"scheduler","_id":"Uxksn9yAE3WxDION"}
 {"date":"2015-01-13, 20:18:00","toggle":"on","origin":"scheduler","_id":"V1PKygdfV8hxFaDS"}
+{"date":"2015-01-21, 00:12:07","toggle":"off","origin":"scheduler","_id":"V3x4nSWZwkw5qELO"}
 {"date":"2015-01-04, 07:05:10","toggle":"off","origin":"scheduler","_id":"VCW3FpsoFV0pjfPN"}
 {"date":"2014-12-24, 16:23:06","toggle":"on","origin":"connection status","_id":"VYBxMtzxunLDRlqw"}
 {"date":"2014-12-22, 19:48:51","toggle":"on","origin":"connection status","_id":"VdAhrpUoPAktzV1E"}
@@ -291,6 +301,7 @@
 {"date":"2014-12-24, 16:40:09","toggle":"on","origin":"switch by web","_id":"YEHHQ2fNn8zlsUtR"}
 {"date":"2015-01-19, 20:58:04","toggle":"off","origin":"switch by web","_id":"YbPu6vZM1D2SkoEp"}
 {"date":"2014-12-23, 03:07:49","toggle":"off","origin":"connection status","_id":"YkGwJESfwzYXY0qO"}
+{"date":"2015-01-20, 02:05:32","toggle":"off","origin":"scheduler","_id":"Z7OqKzq5DdXi42h8"}
 {"date":"2015-01-13, 00:38:17","toggle":"off","origin":"connection status","_id":"ZKWXLVJZCNrjcivr"}
 {"date":"2014-12-20, 19:09:03","toggle":"on","origin":"connection status","_id":"ZZs2f6dW6De5SYA9"}
 {"date":"2014-12-20, 19:23:36","toggle":"on","origin":"connection status","_id":"ZaErLVzXFE19YdTd"}
@@ -335,6 +346,7 @@
 {"date":"2014-12-24, 16:23:34","toggle":"off","origin":"switch by web","_id":"dv86qN0M2DdkBZJ6"}
 {"date":"2014-12-27, 04:48:32","toggle":"on","origin":"connection status","_id":"dw7UttCeInof9Nl3"}
 {"date":"2014-12-23, 03:45:04","toggle":"off","origin":"connection status","_id":"e1vcW3aUbmeV7UnF"}
+{"date":"2015-01-20, 01:56:37","toggle":"off","origin":"scheduler","_id":"e4WfC9uMj7Rke778"}
 {"date":"2014-12-23, 03:18:30","toggle":"off","origin":"scheduler","_id":"eIm9J1JuGhWy3dN4"}
 {"date":"2014-12-22, 18:26:05","toggle":"on","origin":"connection status","_id":"eNUhOc1dO35OBw2B"}
 {"date":"2015-01-13, 02:07:05","toggle":"off","origin":"scheduler","_id":"eVLabfodgnyqeI1F"}
@@ -355,8 +367,10 @@
 {"date":"2015-01-04, 07:03:10","toggle":"off","origin":"scheduler","_id":"gZ4gonSYp99jALi0"}
 {"date":"2014-12-22, 18:47:37","toggle":"on","origin":"scheduler","_id":"gcxhbPgo2mHO6vRG"}
 {"date":"2014-12-23, 15:28:37","toggle":"off","origin":"connection status","_id":"geOj2TmPGCxvZkKw"}
+{"date":"2015-01-20, 01:56:40","toggle":"off","origin":"connection status","_id":"gkpbeuCDzeIjIQas"}
 {"date":"2014-12-22, 19:41:07","toggle":"on","origin":"scheduler","_id":"gnbHNlTGQgQLaWHa"}
 {"date":"2014-12-24, 14:14:57","toggle":"off","origin":"connection status","_id":"gntF0mOB5U0qeSJZ"}
+{"date":"2015-01-21, 00:27:49","toggle":"off","origin":"scheduler","_id":"gqLmlidsV4cnjiWK"}
 {"date":"2015-01-13, 21:00:46","toggle":"off","origin":"scheduler","_id":"grGEDAEpDk3rbgy5"}
 {"date":"2014-12-22, 19:05:06","toggle":"on","origin":"connection status","_id":"gwXchM5oXowsUxpB"}
 {"date":"2014-12-23, 21:18:51","toggle":"off","origin":"scheduler","_id":"gz6q6QCsTyelOMzm"}
@@ -376,6 +390,8 @@
 {"date":"2014-12-22, 05:42:34","toggle":"on","origin":"connection status","_id":"i4zPMn2MjbCtdQb9"}
 {"date":"2014-12-27, 05:18:59","toggle":"on","origin":"scheduler","_id":"iFj95uyz1uKqybsH"}
 {"date":"2014-12-27, 04:46:16","toggle":"on","origin":"scheduler","_id":"iVY9w686AbvYsoN3"}
+{"date":"2015-01-20, 01:56:35","toggle":"on","origin":"connection status","_id":"iWzsP0Cvo61YHEKL"}
+{"date":"2015-01-20, 01:56:43","toggle":"off","origin":"switch by web","_id":"icJY1CKsD66OUtK2"}
 {"date":"2014-12-22, 19:24:46","toggle":"on","origin":"scheduler","_id":"ieMwObt9248t8KWD"}
 {"date":"2014-12-22, 19:48:52","toggle":"on","origin":"scheduler","_id":"iiZJLhpbDGlbxKUY"}
 {"date":"2014-12-22, 19:30:19","toggle":"on","origin":"connection status","_id":"ij3NTTN4TGhb8uWW"}
@@ -388,6 +404,7 @@
 {"date":"2014-12-22, 19:47:09","toggle":"on","origin":"scheduler","_id":"jqDyFUGAlLSZQ6SG"}
 {"date":"2015-01-15, 01:22:38","toggle":"off","origin":"connection status","_id":"kITEwrpLdVwvxumE"}
 {"date":"2014-12-27, 03:50:40","toggle":"on","origin":"switch by web","_id":"kJJOqAJXYgy3EZJH"}
+{"date":"2015-01-20, 02:05:16","toggle":"off","origin":"connection status","_id":"kKHgU8rHWZvE4snS"}
 {"date":"2014-12-22, 05:52:11","toggle":"off","origin":"connection status","_id":"kTqYSNAhEKB5b1jN"}
 {"date":"2014-12-23, 15:50:42","toggle":"off","origin":"connection status","_id":"kY7uOxlp4cNz3TkR"}
 {"date":"2014-12-22, 19:47:08","toggle":"on","origin":"connection status","_id":"kx14LjcT2iLrY07x"}
@@ -395,6 +412,7 @@
 {"date":"2014-12-22, 19:26:09","toggle":"on","origin":"scheduler","_id":"lkAeLPx2Z4j5TI4b"}
 {"date":"2014-12-20, 18:48:44","toggle":"on","origin":"connection status","_id":"lxBlUrXMG4lH2x1i"}
 {"date":"2014-12-27, 03:55:07","toggle":"off","origin":"scheduler","_id":"lzH1vvnRPOWB2grc"}
+{"date":"2015-01-20, 01:56:48","toggle":"off","origin":"scheduler","_id":"m99ikXDOE6f5yXKw"}
 {"date":"2014-12-27, 04:53:21","toggle":"on","origin":"scheduler","_id":"mOGfsNWCp6b9OtbG"}
 {"date":"2014-12-22, 19:48:52","toggle":"on","origin":"scheduler","_id":"mOZoXTQYSHUsfBa9"}
 {"date":"2014-12-24, 16:29:23","toggle":"on","origin":"switch by web","_id":"me5yPzpJmAMGE8EL"}
@@ -475,6 +493,7 @@
 {"date":"2014-12-27, 04:05:09","toggle":"off","origin":"scheduler","_id":"tFrOOi5NbJNfMRlk"}
 {"date":"2014-12-24, 16:26:02","toggle":"on","origin":"switch by web","_id":"tQj3DULEcdR6YE88"}
 {"date":"2014-12-22, 18:25:21","toggle":"on","origin":"connection status","_id":"tU9ciT4uA1ttiS97"}
+{"date":"2015-01-20, 22:15:31","toggle":"on","origin":"switch by web","_id":"toeZxgfdzT6N4EAu"}
 {"date":"2014-12-22, 20:13:28","toggle":"on","origin":"connection status","_id":"tseiDjUkX9gEVgbd"}
 {"date":"2014-12-20, 19:10:31","toggle":"on","origin":"connection status","_id":"twFPsWnGuAHjpI9O"}
 {"date":"2014-12-22, 05:41:55","toggle":"on","origin":"connection status","_id":"u6mPNdqWeckMACDW"}
@@ -490,6 +509,7 @@
 {"date":"2014-12-24, 16:29:20","toggle":"off","origin":"connection status","_id":"v9ClHHLj7EIRlg41"}
 {"date":"2014-12-22, 19:26:09","toggle":"on","origin":"scheduler","_id":"vCWqJhbUwI3ko5CZ"}
 {"date":"2015-01-19, 19:17:44","toggle":"on","origin":"scheduler","_id":"vGA6LvP2godE0kft"}
+{"date":"2015-01-20, 22:27:06","toggle":"off","origin":"scheduler","_id":"vKSygGqQq2Cv4lM9"}
 {"date":"2014-12-22, 06:09:22","toggle":"off","origin":"scheduler","_id":"vMOCE0bHFmXFM6L6"}
 {"date":"2014-12-20, 18:53:05","toggle":"on","origin":"connection status","_id":"vQNhQ8vqBPGq8xLR"}
 {"date":"2014-12-24, 16:28:32","toggle":"off","origin":"switch by web","_id":"vTbn7wxqxPGg7GoD"}
@@ -518,15 +538,9 @@
 {"date":"2014-12-20, 16:20:44","toggle":"on","_id":"yz9bSP0z4fSmMXTP"}
 {"date":"2014-12-22, 18:51:05","toggle":"on","origin":"connection status","_id":"z5Di9zb8B78Ng6RR"}
 {"date":"2015-01-20, 01:53:26","toggle":"off","origin":"switch by web","_id":"z6AZbeuaQoF2suj4"}
+{"date":"2015-01-20, 01:56:48","toggle":"off","origin":"scheduler","_id":"zAFaPVfUFpWT2dlv"}
 {"date":"2014-12-22, 19:47:24","toggle":"on","origin":"scheduler","_id":"zF7tKsqU0Mzs2P0i"}
 {"date":"2014-12-27, 04:10:38","toggle":"off","origin":"scheduler","_id":"zHV9n32VdF5e1w8O"}
 {"date":"2014-12-22, 19:50:57","toggle":"on","origin":"scheduler","_id":"zLv0lJmXE7JLkaKv"}
 {"date":"2014-12-20, 19:19:14","toggle":"on","origin":"connection status","_id":"zM4JSTq3g33BFAsI"}
-{"date":"2015-01-20, 01:56:35","toggle":"on","origin":"connection status","_id":"iWzsP0Cvo61YHEKL"}
-{"date":"2015-01-20, 01:56:37","toggle":"off","origin":"scheduler","_id":"e4WfC9uMj7Rke778"}
-{"date":"2015-01-20, 01:56:40","toggle":"off","origin":"connection status","_id":"gkpbeuCDzeIjIQas"}
-{"date":"2015-01-20, 01:56:42","toggle":"on","origin":"switch by web","_id":"2Qev4E6i9s8NUwT2"}
-{"date":"2015-01-20, 01:56:43","toggle":"off","origin":"switch by web","_id":"icJY1CKsD66OUtK2"}
-{"date":"2015-01-20, 01:56:44","toggle":"on","origin":"switch by web","_id":"7ByuGO0cPnHy1IlN"}
-{"date":"2015-01-20, 01:56:48","toggle":"off","origin":"scheduler","_id":"zAFaPVfUFpWT2dlv"}
-{"date":"2015-01-20, 01:56:48","toggle":"off","origin":"scheduler","_id":"m99ikXDOE6f5yXKw"}
+{"date":"2015-01-21, 00:35:52","toggle":"off","origin":"scheduler","_id":"aYZmaKpPyiYOkhLv"}
