@@ -64,7 +64,7 @@ function routes(params){
 					var meanArrayElement = meanArray[j];
 					var meanArrayNext = meanArray[j+1];
 					if (doc.date>=meanArrayElement.start && doc.date<=meanArrayNext.start){
-						meanArrayElement.mean.push(doc.temperature);
+						meanArrayElement.mean.push(doc.value);
 					}
 				}
 				console.log(doc.date)
