@@ -89,7 +89,7 @@ scheduler.checkStatus();
 var sensor = require('sensor');
 var  temperatureSensor = new sensor('python '+runDirectory+'/python/'+dummyDevicePrefix+'termometer.py','termo AIR',temperatureDB,30000);
 temperatureSensor.enable();
-var moistureSensor = new sensor('sudo python '+runDirectory+'/python/'+dummyDevicePrefix+'soilmoisturemeter.py 16','moisture',moistureDB,1800000);
+var moistureSensor = new sensor('sudo python '+runDirectory+'/python/'+dummyDevicePrefix+'soilmoisturemeter.py 0','moisture',moistureDB,1800000);
 moistureSensor.enable();
 
 io.on('connection', function (socket) {
