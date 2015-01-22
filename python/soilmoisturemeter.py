@@ -1,13 +1,20 @@
 #!/usr/bin/python
 import sys
-import RPi.GPIO as GPIO
+import spidev
+
+# Open SPI bus
+spi = spidev.SpiDev()
+spi.open(0,0)
+
+channel = int(sys.argv[1])
+
+# Function to read SPI data from MCP3008 chip
+def ReadChannel(channel):
+   adc = spi.xfer2([1,(8+channel)<<4,0])
+   data = ((adc[1]&3) << 8) + adc[2]
+   return data
+   
+print ReadChannel(channel)
 
 
-argumentPort = sys.argv[1]
-portNumber = int(argumentPort)
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
-GPIO.setup(portNumber, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-print GPIO.input(portNumber)
 	
