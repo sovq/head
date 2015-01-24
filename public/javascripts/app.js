@@ -13,8 +13,8 @@ GreenHouseApp.config(['$routeProvider', function($routeProvider) {
       }).
       when('/watering', {
         templateUrl: 'partials/watering',
-      }).when('/logs',{
-		  templateUrl: 'partials/logs',
+      }).when('/temperature',{
+		  templateUrl: 'partials/temperature',
 //		  controller: 'LogsDisplayController'		  
 	  }).
       when('/404',{
