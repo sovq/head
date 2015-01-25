@@ -26,3 +26,10 @@ div(ng-controller='LightScheduleController')
     i.fa.fa-toggle-off.fa-2x
    h4 Light switch
    span.text-muted status: {{lightSwitchState}}
+   
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-1.placeholder 
+   h2 LightSwitch
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-12.placeholder
+   div(lightswitchlog logdata="lightSwitchLogData")
