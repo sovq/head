@@ -3,7 +3,7 @@ var TIME_STEP = 0.25;
 var FOUR_HOURS_IN_MS = 14400000;
 
 function getChartData(scope,dateSpan,http){
-	
+	scope.data="loading";
 	http.get('/temperature/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 			success(function(data, status, headers, config) {
 				  console.log(data);
