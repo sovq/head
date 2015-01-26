@@ -56,56 +56,51 @@ angular.module('angularCharts').directive('acChart', [
      * @return {[type]} [description]
      */
      
-     /*
-      * 
-      * function loader(config) {
-  return function() {
-    var radius = Math.min(config.width, config.height) / 2;
-    var tau = 2 * Math.PI;
+		function loader(mainsvg,config) {
+			return function() {
+				var radius = Math.min(config.width, config.height) / 2;
+				var tau = 2 * Math.PI;
+				var arc = d3.svg.arc()
+					.innerRadius(radius*0.5)
+					.outerRadius(radius*0.9)
+					.startAngle(0);
+				var myg = mainsvg.append("g")
+					.attr("width", totalWidth)
+					.attr("height", totalWidth)
+					.attr("transform", "translate("+config.x+","+config.y+")")
+			 
+				var spinnersvg = myg.append("svg")
+					.attr("id", config.id)
+					.attr("width", config.width)
+					.attr("height", config.height)
+					.append("g")
+					.attr("transform", "translate(" + config.width /2  + "," + config.height / 2 + ")")
 
-    var arc = d3.svg.arc()
-            .innerRadius(radius*0.5)
-            .outerRadius(radius*0.9)
-            .startAngle(0);
+				var background = spinnersvg.append("path")
+					.datum({endAngle: 0.33*tau})
+					.style("fill", "#4D4D4D")
+					.attr("d", arc)
+					.call(spin, 500)
 
-    var svg = d3.select(config.container).append("svg")
-        .attr("id", config.id)
-        .attr("width", config.width)
-        .attr("height", config.height)
-      .append("g")
-        .attr("transform", "translate(" + config.width / 2 + "," + config.height / 2 + ")")
+				function spin(selection, duration) {
+					selection.transition()
+						.ease("linear")
+						.duration(duration)
+						.attrTween("transform", function() {
+							return d3.interpolateString("rotate(0)", "rotate(360)");
+						});
+					setTimeout(function() { spin(selection, duration); }, duration);
+				}
 
-    var background = svg.append("path")
-            .datum({endAngle: 0.33*tau})
-            .style("fill", "#4D4D4D")
-            .attr("d", arc)
-            .call(spin, 1500)
+				function transitionFunction(path) {
+					path.transition()
+						.duration(7500)
+						.attrTween("stroke-dasharray", tweenDash)
+						.each("end", function() { d3.select(this).call(transition); });
+				}
 
-    function spin(selection, duration) {
-        selection.transition()
-            .ease("linear")
-            .duration(duration)
-            .attrTween("transform", function() {
-                return d3.interpolateString("rotate(0)", "rotate(360)");
-            });
-
-        setTimeout(function() { spin(selection, duration); }, duration);
-    }
-
-    function transitionFunction(path) {
-        path.transition()
-            .duration(7500)
-            .attrTween("stroke-dasharray", tweenDash)
-            .each("end", function() { d3.select(this).call(transition); });
-    }
-
-  };
-}
-
-
-var myLoader = loader({width: 960, height: 500, container: "#loader_container", id: "loader"});
-myLoader();
-      * */
+			};
+		}
      
 		function init() {
 				
@@ -162,13 +157,9 @@ myLoader();
 		function prepareData() {
 			data = scope.acData;
 			chartType = scope.acChart;
-			if(data!='loading'){
-				series = data ? data.series || [] : [];
-				points = data ? data.data || [] : [];
-			}else{
-				series = ['loading'];
-				points = [{x:0,y:[0]}];
-			}
+			series = data ? data.series || [] : [];
+			points = data ? data.data || [] : [];
+
 			if (scope.acConfig) {
 				angular.extend(config, scope.acConfig);
 			}
@@ -184,8 +175,6 @@ myLoader();
 				xAxis.tickValues(allTicks.filter(function (e, i) {
 					return i % mod === 0;
 				}));
-			}else if(series=='loading'){
-				return 0;
 			}
 		}
       
@@ -269,7 +258,11 @@ myLoader();
 					lineChunksArray.push(actualValues);
 				}
 	 			lineChunksArray.forEach(function(item){
-					linedata.push({series:"",values:item});  
+					var label = '';
+					if (series=='loading'){
+						label='loading';
+					}
+					linedata.push({series:label,values:item});  
 				})
 				linedata[linedata.length-1].series=value;
 			});
@@ -284,17 +277,41 @@ myLoader();
 			
 			svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
 			svg.append('g').attr('class', 'y axis').call(yAxis);
-			var point = svg.selectAll('.points').data(linedata).enter().append('g');
-			var path = point.attr('points', 'points').append('path').attr('class', 'ac-line').style('stroke', function (d, i) {
-				return getColor(i);
-			}).attr('d', function (d) {
-				return line(d.values);
-			}).attr('stroke-width', '2').attr('fill', 'none');
+			if(series!='loading'||series==null){
+				var point = svg.selectAll('.points').data(linedata).enter().append('g');
+				var path = point.attr('points', 'points').append('path').attr('class', 'ac-line').style('stroke', function (d, i) {
+					return getColor(i);
+				}).attr('d', function (d) {
+					return line(d.values);
+				}).attr('stroke-width', '2').attr('fill', 'none');
+			}else{
+				
+				//right: 40,
+				//bottom: 20,
+				//left: 40
+
+				//chartx=(totalWidth-margin.left)/2)
+				//charty=
+				var mypositionx =((totalWidth/2)-(totalHeight/4))
+				var mypositiony =(((totalHeight-margin.bottom)/2)-(totalHeight/4))
+				
+				var myLoader = loader(svg,{width: totalHeight/4, height: totalHeight/4, container: chartContainer[0], id: "loader",x:mypositionx,y:mypositiony});
+				myLoader();
+				
+			}
+			
+			
+			     /*
+      * 
+      * 
+
+var myLoader = loader({width: 960, height: 500, container: "#loader_container", id: "loader"});
+myLoader();
         /** Animation function
        * [last description]
        * @type {[type]}
        */
-			if (linedata.length > 0) {
+			if (linedata.length > 0 && series!='loading') {
 				var last = linedata[linedata.length - 1].values;
 				if (last.length > 0) {
 					var totalLength = path.node().getTotalLength() + getX(last[last.length - 1].x);
@@ -310,47 +327,48 @@ myLoader();
        * @return {[type]}       [description]
        */
 			angular.forEach(linedata, function (value, key) {
-		  
-				var points = svg.selectAll('.circle').data(removeNoDataAndFuture(value.values)).enter();
-				points.append('circle').attr('cx', function (d) {
-					return getX(d.x);
-				}).attr('cy', function (d) {
-					return y(d.y);
-				}).attr('r', 1.5).style('fill', getColor(linedata.indexOf(value))).style('stroke', getColor(linedata.indexOf(value))).on('mouseover', function (series) {
-					return function (d) {
-						makeToolTip({
-							index: d.x,
-							value: d.tooltip ? d.tooltip : d.y,
-							series: series
-						}, d3.event);
-						config.mouseover(d, d3.event);
-						scope.$apply();
-					};
-				}(value.series)).on('mouseleave', function (d) {
-					removeToolTip();
-					config.mouseout(d, d3.event);
-					scope.$apply();
-				}).on('mousemove', function (d) {
-					updateToolTip(d3.event);
-				}).on('click', function (d) {
-					config.click(d, d3.event);
-					scope.$apply();
-				});
-				
-				if (config.labels) {
-					points.append('text').attr('x', function (d) {
+				if (value.series!='loading'){
+					var points = svg.selectAll('.circle').data(removeNoDataAndFuture(value.values)).enter();
+					points.append('circle').attr('cx', function (d) {
 						return getX(d.x);
-					}).attr('y', function (d) {
+					}).attr('cy', function (d) {
 						return y(d.y);
-					}).text(function (d) {
-						return d.y;
+					}).attr('r', 1.5).style('fill', getColor(linedata.indexOf(value))).style('stroke', getColor(linedata.indexOf(value))).on('mouseover', function (series) {
+						return function (d) {
+							makeToolTip({
+								index: d.x,
+								value: d.tooltip ? d.tooltip : d.y,
+								series: series
+							}, d3.event);
+							config.mouseover(d, d3.event);
+							scope.$apply();
+						};
+					}(value.series)).on('mouseleave', function (d) {
+						removeToolTip();
+						config.mouseout(d, d3.event);
+						scope.$apply();
+					}).on('mousemove', function (d) {
+						updateToolTip(d3.event);
+					}).on('click', function (d) {
+						config.click(d, d3.event);
+						scope.$apply();
 					});
+					
+					if (config.labels) {
+						points.append('text').attr('x', function (d) {
+							return getX(d.x);
+						}).attr('y', function (d) {
+							return y(d.y);
+						}).text(function (d) {
+							return d.y;
+						});
+					}
 				}
 		});
         /**
        * Labels at the end of line
        */
-        if (config.lineLegend === 'lineEnd') {
+        if (config.lineLegend === 'lineEnd'&&series!='loading') {
           point.append('text').datum(function (d) {
             return {
               name: d.series,

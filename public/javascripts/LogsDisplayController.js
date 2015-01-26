@@ -3,7 +3,11 @@ var TIME_STEP = 0.25;
 var FOUR_HOURS_IN_MS = 14400000;
 
 function getChartData(scope,dateSpan,http){
-	scope.data="loading";
+	if(scope.data!=null){
+		scope.data.series=['loading'];
+	}else{
+		scope.data={series:['loading'],data:[{x:0,y:[0]}]}	
+	}
 	http.get('/temperature/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 			success(function(data, status, headers, config) {
 				  console.log(data);
@@ -62,6 +66,7 @@ GreenHouseApp.controller('ChartDisplayController', ['$scope','$http', function($
 
 	
 	setStartEndInScope($scope,getTimeSpan($scope.chartCenter,$scope.chartDuration));
+	
 	getChartData($scope,getTimeSpan($scope.chartCenter,$scope.chartDuration),$http);
 
 	$scope.zoomChart = function(direction){
