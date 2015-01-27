@@ -4,9 +4,9 @@
  */
 
 function routes(params){
-	var tempDB = params.tempDB;
-	var lightSwitchLogDB = params.lightSwitchLogDB;
-	var sunsetDB = params.sunsetDB;
+	var tempDB = params.sensorData;
+	var lightSwitchLogDB = params.switchlog;
+	var sunsetDB = params.sunset;
 	var dateFormat = require('dateformat');
 	var tempUtils = require('./temperature');
 
@@ -51,8 +51,8 @@ function routes(params){
 		startDateString = dateFormat(startDate, "yyyy-mm-dd, HH:MM:ss");
 		endDateString = dateFormat(endDate, "yyyy-mm-dd, HH:MM:ss");
 		
-		console.log(startDateString);
-		console.log(endDateString);
+		//console.log(startDateString);
+		//console.log(endDateString);
 		
 		
 		
@@ -67,7 +67,7 @@ function routes(params){
 						meanArrayElement.mean.push(doc.value);
 					}
 				}
-				console.log(doc.date)
+				//console.log(doc.date)
 			}
 			meanArray.pop();
 			console.log("number of meanArray elements"+meanArray.length)

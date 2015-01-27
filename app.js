@@ -1,38 +1,16 @@
-/*
- *	Configuration
- */
- 
-var dummyDevices = false; // false if sensors are plugged
-var runDirectory = '/home/pi/greenhouse';
-
-/*
- * End of configuration
- */
-
-var dummyDevicePrefix = 'dummy_';
-
-if(!dummyDevices){
-	dummyDevicePrefix = "";
+var config = new require('./config')();
+var Nedb = require('nedb');
+db = {
+	sensorData: new Nedb({ filename: this.rundir+'db/sensorlog.db', autoload: true }),
+	switchlog: new Nedb({ filename: this.rundir+'db/switchlog.db', autoload: true }),
+	sunset: new Nedb({ filename: this.rundir+'db/sunset.db', autoload: true }),	
+	config : new Nedb({ filename: this.rundir+'db/config.db', autoload: true })	
 }
-
-/*
- *  Database config
- * 
- */
-
-var Nedb = require('nedb')
-var temperatureDB = new Nedb({ filename: runDirectory+'/db/temperature.db', autoload: true });
-var lightswitchlogDB = new Nedb({ filename: runDirectory+'/db/ligthswitchlog.db', autoload: true });
-var moistureDB = new Nedb({ filename: runDirectory+'/db/moisture.db', autoload: true });
-var configDB = 	new Nedb({ filename: runDirectory+'/db/config.db', autoload: true })
-var sunsetDB = 	new Nedb({ filename: runDirectory+'/db/sunset.db', autoload: true })
-
-var databases = 	{tempDB:temperatureDB,
-					lightSwitchLogDB:lightswitchlogDB,
-					sunsetDB:sunsetDB}
+var ssrSwitches = config.ssrSwitches;
+var sensors = config.sensors;
 
 var express = require('express')
-  , routes = require('./routes')(databases)
+  , routes = require('./routes')(db)
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -59,9 +37,9 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/partials/:name', function (req, res)
- { var name = req.params.name;
-   res.render('partials/' + name);
+app.get('/partials/:name', function (req, res){ 
+	var name = req.params.name;
+	res.render('partials/' + name);
 });
 app.get('/lightinfo/:date', routes.lightinfo);
 app.get('/lightswitchlog/date/:date/direction/:direction', routes.lightswitchlog);
@@ -78,18 +56,18 @@ connectionEvent = new EventEmitter();
 
 ioEvent = new EventEmitter();
 
-var ooswitch = require('ooswitch');
-var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py',lightswitchlogDB);
-//var velve = new
+var ssr = require('ssrswitch');
+var lightSwitch = new ssr(ssrSwitches.lighting,ioEvent,db.switchlog);
+
 var lightschedule = require('lightschedule');
 
-var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,configDB,sunsetDB)
+var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
 scheduler.checkStatus();
 
 var sensor = require('sensor');
-var  temperatureSensor = new sensor('python '+runDirectory+'/python/'+dummyDevicePrefix+'termometer.py','termo AIR',temperatureDB,30000);
+var  temperatureSensor = new sensor(sensors.termometer1,db.sensorData,30000);
 temperatureSensor.enable();
-var moistureSensor = new sensor('sudo python '+runDirectory+'/python/'+dummyDevicePrefix+'soilmoisturemeter.py 0','moisture',moistureDB,1800000);
+var moistureSensor = new sensor(sensors.soilmoisturemeter,db.sensorData,1800000);
 moistureSensor.enable();
 
 io.on('connection', function (socket) {
