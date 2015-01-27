@@ -1,10 +1,10 @@
 var config = new require('./config')();
 var Nedb = require('nedb');
-db = {
-	sensorData: new Nedb({ filename: this.rundir+'db/sensorlog.db', autoload: true }),
-	switchlog: new Nedb({ filename: this.rundir+'db/switchlog.db', autoload: true }),
-	sunset: new Nedb({ filename: this.rundir+'db/sunset.db', autoload: true }),	
-	config : new Nedb({ filename: this.rundir+'db/config.db', autoload: true })	
+var db = {
+	sensorData: new Nedb({ filename: config.rundir+'db/sensorlog.db', autoload: true }),
+	switchlog: new Nedb({ filename: config.rundir+'db/switchlog.db', autoload: true }),
+	sunset: new Nedb({ filename: config.rundir+'db/sunset.db', autoload: true }),	
+	config : new Nedb({ filename: config.rundir+'db/config.db', autoload: true })	
 }
 var ssrSwitches = config.ssrSwitches;
 var sensors = config.sensors;
