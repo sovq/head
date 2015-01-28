@@ -64,7 +64,7 @@ ioEvent = new EventEmitter();
 var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
 var velve = new Ssr(ssrSwitches.velve,ioEvent,db.switchlog);
 
-var wateringController = new Plc({name:'watering',ssrSwitch:velve})
+var wateringController = new Controller({name:'watering',ssrSwitch:velve})
 
 var scheduler = new LightSchedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
 scheduler.checkStatus();
