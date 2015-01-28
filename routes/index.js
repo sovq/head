@@ -8,7 +8,7 @@ function routes(params){
 	var lightSwitchLogDB = params.switchlog;
 	var sunsetDB = params.sunset;
 	var dateFormat = require('dateformat');
-	var tempUtils = require('./temperature');
+	var tempUtils = require('./sensordata');
 
 	this.index = function(req, res){
 		res.render('index', { title: 'GreenHouse' });
@@ -38,10 +38,11 @@ function routes(params){
 	};
 	
 	
-	this.temperature = function(req,res){
+	this.sensordata = function(req,res){
 		var results = [];
 		var start = req.params.start;
 		var end = req.params.end;
+		var sensorName = req.params.sensor;
 		
 		startDate = new Date();
 		endDate = new Date();
@@ -56,11 +57,12 @@ function routes(params){
 		
 		
 		
-		tempDB.find({date:{$gte:startDateString,$lte:endDateString}}).sort({date:1}).exec(function(err,docs){
+		tempDB.find({date:{$gte:startDateString,$lte:endDateString},sensor:sensorName}).sort({date:1}).exec(function(err,docs){
 			var meanArray = tempUtils.createMeanArray(start,end,docs)
 			for(var i=0;i<docs.length;i++){
 				var doc = docs[i];
 				for(var j=0;j<50;j++){
+			
 					var meanArrayElement = meanArray[j];
 					var meanArrayNext = meanArray[j+1];
 					if (doc.date>=meanArrayElement.start && doc.date<=meanArrayNext.start){
@@ -71,7 +73,7 @@ function routes(params){
 			}
 			meanArray.pop();
 			console.log("number of meanArray elements"+meanArray.length)
-			resultArray = tempUtils.buildResponseJSON(meanArray);
+			resultArray = tempUtils.buildResponseJSON(meanArray,sensorName);
 			
 			//console.log(resultArray);
 			var json = JSON.stringify(resultArray); 

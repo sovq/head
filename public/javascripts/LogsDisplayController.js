@@ -8,7 +8,7 @@ function getChartData(scope,dateSpan,http){
 	}else{
 		scope.data={series:['loading'],data:[{x:0,y:[0]}]}	
 	}
-	http.get('/temperature/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
+	http.get('/sensordata/AIR/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 			success(function(data, status, headers, config) {
 				  console.log(data);
 				  scope.data=data;		  

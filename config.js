@@ -12,7 +12,27 @@ function config(){
 	
 	this.dummyPrefix = 'dummy_'			  
 
-
+	this.buildExecString=function(config){
+		var execString = '';
+		if(config.superUserExec){
+			execString += 'sudo ';
+		}
+		execString += 'python '
+		execString += config.rundir
+		execString += config.dir
+		if(config.dummy){
+			execString += config.dummyPrefix;
+		}
+		execString += config.path;
+		if(config.interface=='spi'){
+			execString += ' '
+			execString += config.channel;
+		}else if(config.interface=='gpio'){
+			execString += ' '
+			execString += config.gpio;		
+		}
+		return execString;
+	}
 
 // list all switching devices
 
@@ -26,9 +46,11 @@ function config(){
 			superUserExec: true,
 			dir: 'python/',
 			path: 'switch.py',
+			interface: 'gpio',
 			gpio: '20', 
 			rundir: this.rundir,
-			dummyPrefix: this.dummyPrefix
+			dummyPrefix: this.dummyPrefix,
+			buildExecString: this.buildExecString
 			
 		},
 		lighting : {
@@ -39,9 +61,11 @@ function config(){
 			superUserExec: true,
 			dir: 'python/',
 			path: 'switch.py',
+			interface: 'gpio',
 			gpio: '21',
 			rundir: this.rundir,
-			dummyPrefix: this.dummyPrefix
+			dummyPrefix: this.dummyPrefix,
+			buildExecString: this.buildExecString
 		}
 	}
 	
@@ -57,7 +81,8 @@ function config(){
 			interface: 'none',
 			superUserExec: false,
 			rundir: this.rundir,
-			dummyPrefix: this.dummyPrefix
+			dummyPrefix: this.dummyPrefix,
+			buildExecString: this.buildExecString
 		},
 		soilmoisturemeter:{
 			name: 'moisture',
@@ -70,7 +95,8 @@ function config(){
 			channel: 0,
 			superUserExec: false,
 			rundir: this.rundir,
-			dummyPrefix: this.dummyPrefix
+			dummyPrefix: this.dummyPrefix,
+			buildExecString: this.buildExecString
 		}
 	}
 	return this;

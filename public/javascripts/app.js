@@ -70,7 +70,7 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 			});
 		});
 		
-		socket.on('lightSwitch',function(data){
+		socket.on('lighting',function(data){
 			console.log("lightSwitch: " + data.lightState);
 			$scope.$apply(function(){
 				if(data.lightState=="on"){

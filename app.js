@@ -43,7 +43,7 @@ app.get('/partials/:name', function (req, res){
 });
 app.get('/lightinfo/:date', routes.lightinfo);
 app.get('/lightswitchlog/date/:date/direction/:direction', routes.lightswitchlog);
-app.get('/temperature/start/:start/end/:end', routes.temperature)
+app.get('/sensordata/:sensor/start/:start/end/:end', routes.sensordata)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
@@ -64,10 +64,10 @@ var lightschedule = require('lightschedule');
 var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
 scheduler.checkStatus();
 
-var sensor = require('sensor');
-var  temperatureSensor = new sensor(sensors.termometer1,db.sensorData,30000);
+var Sensor = require('sensor');
+var  temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
 temperatureSensor.enable();
-var moistureSensor = new sensor(sensors.soilmoisturemeter,db.sensorData,1800000);
+var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,1800000);
 moistureSensor.enable();
 
 io.on('connection', function (socket) {
