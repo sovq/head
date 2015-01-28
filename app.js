@@ -54,7 +54,7 @@ var EventEmitter = require('events').EventEmitter;
 var Ssr = require('ssrswitch');
 var LightSchedule = require('lightschedule');
 var Sensor = require('sensor');
-var Plc = require('plc');
+var Controller = require('controller');
 
 connectionEvent = new EventEmitter();
 
