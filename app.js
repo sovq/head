@@ -50,35 +50,45 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 });
 
 var io = require('socket.io')(server);
+var EventEmitter = require('events').EventEmitter; 
+var Ssr = require('ssrswitch');
+var LightSchedule = require('lightschedule');
+var Sensor = require('sensor');
+var Plc = require('plc');
 
-EventEmitter = require('events').EventEmitter; 
 connectionEvent = new EventEmitter();
 
 ioEvent = new EventEmitter();
 
-var ssr = require('ssrswitch');
-var lightSwitch = new ssr(ssrSwitches.lighting,ioEvent,db.switchlog);
 
-var lightschedule = require('lightschedule');
+var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
+var velve = new Ssr(ssrSwitches.velve,ioEvent,db.switchlog);
 
-var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
+var wateringController = new Plc({name:'watering',ssrSwitch:velve})
+
+var scheduler = new LightSchedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
 scheduler.checkStatus();
 
-var Sensor = require('sensor');
-var  temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
-temperatureSensor.enable();
-var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,1800000);
-moistureSensor.enable();
+
+var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
+var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,20000);
+
+moistureSensor.addListener(moistureSensor.name,wateringController.sensorEventListner)
+
+
 
 io.on('connection', function (socket) {
-	lightSwitch.connectionEventHandler(lightSwitch,{ioSocket:socket});
+	
+	socket.on(lightSwitch.name,function(data){
+		lightSwitch.switchEventHandler(data);
+	});	
+	
+	lightSwitch.addListener(lightSwitch.name,function(data){
+		socket.emit(lightSwitch.name,data)
+	});
+	
 	scheduler.connectionEventHandler(scheduler,{ioSocket:socket});
 	
-	console.log("new connection");
-	
-	socket.on('lightSwitch',function(data){
-		lightSwitch.switchEventHandler(lightSwitch,data,socket);
-	});	
 	socket.on('SchedulerStatusChanged',function(data){
 		console.log("------------------");
 		console.log("scheduler status changed");

@@ -41,7 +41,7 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 			}else{
 				$scope.lightSwitch = 'on';
 			}
-			socket.emit('lightSwitch',{'lightState':$scope.lightSwitch});
+			socket.emit('lighting',{'lightState':$scope.lightSwitch});
 		};
 		
 		$scope.lightScheduleSwitchChage = function(){
@@ -71,9 +71,9 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 		});
 		
 		socket.on('lighting',function(data){
-			console.log("lightSwitch: " + data.lightState);
+			console.log("lightSwitch: " + data);
 			$scope.$apply(function(){
-				if(data.lightState=="on"){
+				if(data=="on"){
 					$scope.lightSwitchState = 'on';
 					$scope.lightSwitchOn=true;
 					$scope.lightSwitchOff=false;
@@ -84,4 +84,5 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 				}
 			});
 		});
+		socket.emit('lighting',{'lightState':'status'});
 }]);	

@@ -1,9 +1,9 @@
-// set this.rundir in line 7
+// set this.rundir in line 6
 // set 'dummy:true' for all devices that are not physically available
 
 function config(){
 
-	this.rundir = '/home/pi/greenhouse/'; 
+	this.rundir = null; 
 	
 	if(this.rundir==null){
 		console.log("Set this.rundir in config.js");
@@ -41,7 +41,7 @@ function config(){
 		velve : {
 			name: 'velve',
 			////////////////////////////////////////////////////////
-			dummy: false,  // set to true if no device is connected
+			dummy: true,  // set to true if no device is connected
 			////////////////////////////////////////////////////////
 			superUserExec: true,
 			dir: 'python/',
@@ -56,7 +56,7 @@ function config(){
 		lighting : {
 			name: 'lighting',
 			////////////////////////////////////////////////////////
-			dummy: false,  // set to true if no device is connected
+			dummy: true,  // set to true if no device is connected
 			////////////////////////////////////////////////////////
 			superUserExec: true,
 			dir: 'python/',
@@ -74,7 +74,7 @@ function config(){
 		termometer1:{
 			name: 'AIR',
 			///////////////////////////////////////////////////////////
-			dummy: false, // set to true if no device is connected
+			dummy: true, // set to true if no device is connected
 			///////////////////////////////////////////////////////////
 			dir: 'python/',
 			path: 'termometer.py',
@@ -87,7 +87,7 @@ function config(){
 		soilmoisturemeter:{
 			name: 'moisture',
 			///////////////////////////////////////////////////////////////
-			dummy: false, // set to true if no device is connected
+			dummy: true, // set to true if no device is connected
 			//////////////////////////////////////////////////////////////
 			dir: 'python/',
 			path: 'soilmoisturemeter.py',
