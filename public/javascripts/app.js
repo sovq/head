@@ -51,11 +51,11 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 			}else{
 				$scope.lightScheduleSwitchState = 'on';
 			}
-			socket.emit('SchedulerStatusChanged',{'schedulerState':$scope.lightScheduleSwitchState});
+			socket.emit('lightScheduler',{'schedulerState':$scope.lightScheduleSwitchState});
 		};
 		
-		socket.on('SchedulerStatus',function(data){
-			console.log("SchedulerStatus: " + data.schedulerState);
+		socket.on('lightScheduler',function(data){
+			console.log("schedulerState: " + data.schedulerState);
 			
 			$scope.$apply(function(){
 				if(data.schedulerState=="on"){
@@ -85,4 +85,5 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
 			});
 		});
 		socket.emit('lighting',{'lightState':'status'});
+		socket.emit('lightScheduler',{'schedulerState':'status'})
 }]);	
