@@ -154,8 +154,32 @@ angular.module('angularCharts').directive('acChart', [
      * Parses data from attributes
      * @return {[type]} [description]
      */
+     		function clone(obj) {
+				if (null == obj || "object" != typeof obj) return obj;
+				if (obj instanceof Date) {
+					var copy = new Date();
+					copy.setTime(obj.getTime());
+					return copy;
+				}
+				if (obj instanceof Array) {
+					var copy = [];
+					for (var i = 0, len = obj.length; i < len; i++) {
+						copy[i] = clone(obj[i]);
+					}
+					return copy;
+				}
+				if (obj instanceof Object) {
+					var copy = {};
+					for (var attr in obj) {
+						if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+					}
+					return copy;
+				}
+
+				throw new Error("Unable to copy obj! Its type isn't supported.");
+			}
 		function prepareData() {
-			data = scope.acData;
+			data = clone(scope.acData);
 			chartType = scope.acChart;
 			series = data ? data.series || [] : [];
 			points = data ? data.data || [] : [];
@@ -215,12 +239,18 @@ angular.module('angularCharts').directive('acChart', [
 			});
 			var yData = [];
 			var linedata = [];
+
+			
 			points.forEach(function (d) {
 				if(!(d.y[0]=="no_data"||d.y[0]=="future")){
-					d.y.map(function (e) {
-						yData.push(e);
-					});
+					d.draw = true;
+				}else{
+					d.draw = false;
+					d.y[0]=0;																						
 				}
+				d.y.map(function (e) {
+						yData.push(e);
+				});
 			});
 			var yMaxPoints = d3.max(points.map(function (d) {
 				return d.y.length;
@@ -234,7 +264,8 @@ angular.module('angularCharts').directive('acChart', [
 						return {
 							x: point.x,
 							y: e,
-							tooltip: point.tooltip
+							tooltip: point.tooltip,
+							draw : point.draw
 						};
 					})[index] 
 				});
@@ -243,7 +274,7 @@ angular.module('angularCharts').directive('acChart', [
 				var lineContinues = false
 				for(a=0;a<d.values.length;a++){
 					var item = d.values[a];
-					if(item.y!="future" && item.y!="no_data"){
+					if(item.draw){
 						actualValues.push(item);
 						lineContinues = true;
 					}else{
@@ -264,15 +295,20 @@ angular.module('angularCharts').directive('acChart', [
 					}
 					linedata.push({series:label,values:item});  
 				})
-				linedata[linedata.length-1].series=value;
+				if(linedata.length != 0){
+					linedata[linedata.length-1].series=value;
+				}else{
+					d.series='no data'
+					linedata.push(d)
+				}
 			});
 			
 			var svg = d3.select(chartContainer[0]).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 			var setDifferenece = 	d3.max(yData) - d3.min(yData);
    
 			y.domain([
-				d3.min(yData) - (setDifferenece*1.05),
-				d3.max(yData) + (setDifferenece*1.05)
+				d3.min(yData) - (1),
+				d3.max(yData) + (1)
 			]);
 			
 			svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
@@ -327,7 +363,7 @@ myLoader();
        * @return {[type]}       [description]
        */
 			angular.forEach(linedata, function (value, key) {
-				if (value.series!='loading'){
+				if (value.series!='loading'&&value.series!='no data'){
 					var points = svg.selectAll('.circle').data(removeNoDataAndFuture(value.values)).enter();
 					points.append('circle').attr('cx', function (d) {
 						return getX(d.x);

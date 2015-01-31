@@ -56,18 +56,14 @@ var LightSchedule = require('lightschedule');
 var Sensor = require('sensor');
 var Controller = require('controller');
 
-connectionEvent = new EventEmitter();
-
-ioEvent = new EventEmitter();
 
 
 var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
-var velve = new Ssr(ssrSwitches.velve,ioEvent,db.switchlog);
+var velve = new Ssr(ssrSwitches.velve,db.switchlog);
 
 var wateringController = new Controller({name:'watering',ssrSwitch:velve})
 
-var scheduler = new LightSchedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
-scheduler.checkStatus();
+var lightScheduler = new LightSchedule.Scheduler(lightSwitch,db.config, db.sunset)
 
 
 var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
@@ -81,24 +77,20 @@ io.on('connection', function (socket) {
 	
 	socket.on(lightSwitch.name,function(data){
 		lightSwitch.switchEventHandler(data);
-	});	
+	});
+	
+	socket.on(lightScheduler.name,function(data){
+		lightScheduler.switchEventHandler(data)
+	});
 	
 	lightSwitch.addListener(lightSwitch.name,function(data){
 		socket.emit(lightSwitch.name,data)
 	});
 	
-	scheduler.connectionEventHandler(scheduler,{ioSocket:socket});
+	lightScheduler.addListener(lightScheduler.name,function(data){
+		socket.emit(lightScheduler.name,data)
+	});
 	
-	socket.on('SchedulerStatusChanged',function(data){
-		console.log("------------------");
-		console.log("scheduler status changed");
-		console.log("toggle schedulera: "+data.schedulerState);
-		console.log("------------------");
-		scheduler.switchEventHandler(scheduler,data,socket);
-	});
 
-	socket.on('disconnect',function(){
-	//	scheduler.disconnectEventHandler(scheduler,{ioSocket:socket})
-	});
 });
 
