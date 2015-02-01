@@ -3,7 +3,7 @@
 
 function config(){
 
-	this.rundir = null; 
+	this.rundir = '/home/kenu/head/'; 
 	
 	if(this.rundir==null){
 		console.log("Set this.rundir in config.js");

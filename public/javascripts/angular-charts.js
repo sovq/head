@@ -306,6 +306,7 @@ angular.module('angularCharts').directive('acChart', [
 			var svg = d3.select(chartContainer[0]).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 			var setDifferenece = 	d3.max(yData) - d3.min(yData);
    
+			
 			y.domain([
 				d3.min(yData) - (1),
 				d3.max(yData) + (1)
