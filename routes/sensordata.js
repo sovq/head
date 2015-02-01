@@ -1,8 +1,8 @@
 var dateFormat =  require("dateformat");
 
-module.exports.buildResponseJSON = function(data){
+module.exports.buildResponseJSON = function(data,sensorName){
 	var results = [];
-	var sensorName = "Air";
+	var sensorName = sensorName;
 	for(i = 0; i<data.length;i++){
 		var temperature = "no_data";
 		var now = new Date();

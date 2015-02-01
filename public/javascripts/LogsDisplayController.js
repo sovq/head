@@ -3,8 +3,12 @@ var TIME_STEP = 0.25;
 var FOUR_HOURS_IN_MS = 14400000;
 
 function getChartData(scope,dateSpan,http){
-	
-	http.get('/temperature/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
+	if(scope.data!=null){
+		scope.data.series=['loading'];
+	}else{
+		scope.data={series:['loading'],data:[{x:0,y:[0]}]}	
+	}
+	http.get('/sensordata/AIR/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 			success(function(data, status, headers, config) {
 				  console.log(data);
 				  scope.data=data;		  
@@ -36,7 +40,7 @@ function setStartEndInScope(scope,span){
 
 
 
-GreenHouseApp.controller('ChartDisplayController', ['$scope','$http',function($scope,$http){
+GreenHouseApp.controller('ChartDisplayController', ['$scope','$http', function($scope,$http){
 	$scope.config = {
 		title: 'Temperature',
 		tooltips: true,
@@ -52,26 +56,17 @@ GreenHouseApp.controller('ChartDisplayController', ['$scope','$http',function($s
 		  position: 'right'
 		}
 	};
-	function getLightSwitchLog(){	
-		$http.get('/lightswitchlog').
-			success(function(data, status, headers, config) {
-				console.log(data);
-				$scope.lightSwitchLogData=data;		  
-			}).
-			error(function(data, status, headers, config) {
-				alert('zjebanstwo');		  
-		});	
-	}
-	$scope.lightSwitchLogData=[{date:1,toggle:"on",source:"hge"},{date:1,toggle:"on",source:"hge"}]
-	getLightSwitchLog()
-		
+	
 	$scope.DisplayZoomOut = true;
 	$scope.DisplayZoomIn = true;
 	$scope.chartCenter = new Date();
 	$scope.chartDuration = FOUR_HOURS_IN_MS;
 	
+	$scope.lightSwitchLogData = [];
+
 	
 	setStartEndInScope($scope,getTimeSpan($scope.chartCenter,$scope.chartDuration));
+	
 	getChartData($scope,getTimeSpan($scope.chartCenter,$scope.chartDuration),$http);
 
 	$scope.zoomChart = function(direction){
@@ -101,29 +96,49 @@ GreenHouseApp.controller('ChartDisplayController', ['$scope','$http',function($s
 		getChartData($scope,timeSpan,$http);
 	}
 	
+
+	
 	
 }]);
 
 
 	
 	
-GreenHouseApp.directive('lightswitchlog',  function() {
+GreenHouseApp.directive('lightswitchlog', ['$http','dateFilter',function($http,dateFilter) {
 	
-  return {
-    scope: {
-    logdata: "="
-},  // use a child scope that inherits from parent
-    restrict: 'AE',
-    replace: 'true',
-	template: '<span><ul>' + 
-				  '<li ng-repeat="d in logdata">' +
-					'date: {{d.date}},  toggle: {{d.toggle}} , source: {{d.origin}}' + 
-					  '</li>' +
-				'</ul></span>'
-					
-  };
+return {
+	scope:	{logdata : '='},  
+	replace: 'true',
+	templateUrl: 'partials/logstable',
+	link: function(scope, iElement, iAttrs){
+			scope.getLightSwitchLog=function(date,direction){
+				$http.get('/lightswitchlog/date/'+date+'/direction/'+direction).
+					success(function(data, status, headers, config) {
+						console.log(data);
+						scope.logdata=data;		  
+					}).
+					error(function(data, status, headers, config) {
+						console.log('error getting data');		  
+					});	
+			}
+			var date = new Date();
+			var formatDate = dateFilter(date,"yyyy-mm-dd, HH:MM:ss");
+			scope.getLightSwitchLog(formatDate,'down');
+	
+			scope.moveLog = function(direction){
+				var index = 0;
+				if(direction=='up'){
+					index = 0;
+				}else if(direction=='down'){
+					index = scope.logdata.length-1;
+				}
+				var date = scope.logdata[index].date;
+				scope.getLightSwitchLog(date,direction);
+			}
+		}
 
-});
+	}
+}]);
 	
 	
 	

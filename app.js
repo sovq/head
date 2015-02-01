@@ -1,20 +1,16 @@
-/*
- *	Configuration
- */
- 
-var dummyDevices = false;
-var runDirectory = '/home/pi/greenhouse';
+var config = new require('./config')();
+var Nedb = require('nedb');
+var db = {
+	sensorData: new Nedb({ filename: config.rundir+'db/sensorlog.db', autoload: true }),
+	switchlog: new Nedb({ filename: config.rundir+'db/switchlog.db', autoload: true }),
+	sunset: new Nedb({ filename: config.rundir+'db/sunset.db', autoload: true }),	
+	config : new Nedb({ filename: config.rundir+'db/config.db', autoload: true })	
+}
+var ssrSwitches = config.ssrSwitches;
+var sensors = config.sensors;
 
-/*
- *  Database
- * */
-
-var Nedb = require('nedb')
-var temperatureDB = new Nedb({ filename: runDirectory+'/temperature.db', autoload: true });
-var lightswitchlogDB = new Nedb({ filename: '/home/pi/greenhouse/ligthswitchlog.db', autoload: true });
-	
 var express = require('express')
-  , routes = require('./routes')({tempDB:temperatureDB,lightSwitchLogDB:lightswitchlogDB})
+  , routes = require('./routes')(db)
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -30,7 +26,10 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(function(req, res) {
+    res.status(400);
+   res.render('404.jade', {title: '404: Nima strony'});
+});
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
@@ -38,45 +37,58 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/partials/:name', function (req, res)
- { var name = req.params.name;
-   res.render('partials/' + name);
+app.get('/partials/:name', function (req, res){ 
+	var name = req.params.name;
+	res.render('partials/' + name);
 });
 app.get('/lightinfo/:date', routes.lightinfo);
-app.get('/lightswitchlog', routes.lightswitchlog);
-app.get('/temperature/start/:start/end/:end', routes.temperature)
+app.get('/lightswitchlog/date/:date/direction/:direction', routes.lightswitchlog);
+app.get('/sensordata/:sensor/start/:start/end/:end', routes.sensordata)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
 var io = require('socket.io')(server);
+var EventEmitter = require('events').EventEmitter; 
+var Ssr = require('ssrswitch');
+var LightSchedule = require('lightschedule');
+var Sensor = require('sensor');
+var Controller = require('controller');
 
-EventEmitter = require('events').EventEmitter; 
 connectionEvent = new EventEmitter();
 
 ioEvent = new EventEmitter();
 
-var ooswitch = require('ooswitch');
-var lightSwitch = new ooswitch('lightSwitch', '21', ioEvent,'sudo python /home/pi/greenhouse/python/switch.py',lightswitchlogDB);
-var lightschedule = require('lightschedule');
 
-var scheduler = new lightschedule.scheduler(lightSwitch,ioEvent)
+var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
+var velve = new Ssr(ssrSwitches.velve,ioEvent,db.switchlog);
+
+var wateringController = new Controller({name:'watering',ssrSwitch:velve})
+
+var scheduler = new LightSchedule.scheduler(lightSwitch,ioEvent,db.config, db.sunset)
 scheduler.checkStatus();
 
-var sensor = require('sensor');
-var  temperatureSensor = new sensor('python /home/pi/greenhouse/python/termometer.py',temperatureDB);
-temperatureSensor.enable();
+
+var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
+var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,20000);
+
+moistureSensor.addListener(moistureSensor.name,wateringController.sensorEventListner)
+
+
 
 io.on('connection', function (socket) {
-	lightSwitch.connectionEventHandler(lightSwitch,{ioSocket:socket});
+	
+	socket.on(lightSwitch.name,function(data){
+		lightSwitch.switchEventHandler(data);
+	});	
+	
+	lightSwitch.addListener(lightSwitch.name,function(data){
+		socket.emit(lightSwitch.name,data)
+	});
+	
 	scheduler.connectionEventHandler(scheduler,{ioSocket:socket});
 	
-	console.log("new connection");
-	
-	socket.on('lightSwitch',function(data){
-		lightSwitch.switchEventHandler(lightSwitch,data,socket);
-	});	
 	socket.on('SchedulerStatusChanged',function(data){
 		console.log("------------------");
 		console.log("scheduler status changed");

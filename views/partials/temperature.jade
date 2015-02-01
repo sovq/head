@@ -1,4 +1,4 @@
-h1.page-header Logs
+h1.page-header Temperature
 
 div(ng-controller='ChartDisplayController')
  div(class='row placeholder')
@@ -9,29 +9,19 @@ div(ng-controller='ChartDisplayController')
    div(data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" style="width:100%;height:300px;")
  div(class='row placeholder')
  
-  .col-xs-6.col-sm-3.col-md-2.placeholder
+  .col-xs-1.placeholder.text-left
    a(href='' ng-click='moveChart("left")') 
     i.fa.fa-arrow-left 
 
-  .col-xs-6.col-sm-3.col-md-2.placeholder
-  .col-xs-6.col-sm-3.col-md-2.placeholder
+  .col-xs-4.placeholder.text-center start: {{startDate| date:"HH:MM:ss, dd-MM-yyyy"}}
+  .col-xs-2.placeholder.text-center
    a(href='' ng-click='zoomChart("out")' ng-show='DisplayZoomOut') 
     i.fa.fa-search-minus
    &nbsp;&nbsp; {{zoomLevel}} &nbsp;&nbsp;
    a(href='' ng-click='zoomChart("in")' ng-show='DisplayZoomIn') 
     i.fa.fa-search-plus
 
-  .col-xs-6.col-sm-3.col-md-2.placeholder
-  .col-xs-6.col-sm-3.col-md-2.placeholder
+  .col-xs-4.placeholder.text-center end:{{endDate| date:"HH:MM:ss, dd-MM-yyyy"}}
+  .col-xs-1.placeholder.text-right
    a(href='' ng-click='moveChart("right")' ) 
     .fa.fa-arrow-right
- div(class='row placeholder')
-  .col-xs-6.col-sm-3.col-md-12.placeholder.
-   start: {{startDate| date:"HH:MM:ss, dd-mm-yyyy"}}
-   end:{{endDate| date:"HH:MM:ss, dd-mm-yyyy"}}
- div(class='row placeholder')
-  .col-xs-6.col-sm-3.col-md-1.placeholder 
-   h2 LightSwitch
- div(class='row placeholder')
-  .col-xs-6.col-sm-3.col-md-12.placeholder
-   div(lightswitchlog logdata="lightSwitchLogData")
