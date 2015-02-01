@@ -4,7 +4,7 @@ $scope.config = {
 		tooltips: true,
 		labels: false,
 		xAxisMaxTicks: 6,
-		yAxisLegend: [0,100],
+		yAxisTickValues: [20,40,60,80,100],
 		
 		mouseover: function() {},
 		mouseout: function() {},
@@ -30,6 +30,11 @@ $scope.config = {
 		}
 		http.get('/sensordata/moisture/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 				success(function(data, status, headers, config) {
+					var limit = 20;
+					  data.series.push("min")
+					  for(i=0;i<data.data.length;i++){
+							data.data[i].y.push(limit)
+					  }
 					  console.log(data);
 					  scope.data=data;		  
 				  }).
