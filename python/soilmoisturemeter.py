@@ -22,7 +22,7 @@ def getMoisture(value):
 	if (value < MINHUMID_SENSOR):
 		value = MINHUMID_SENSOR
 		
-	humidity = float((1 - (value - MINHUMID_SENSOR)/(MAXHUMID_SENSOR-MINHUMID_SENSOR))*100)
+	humidity = float((1 - (value - MINHUMID_SENSOR)/(MAXHUMID_SENSOR-MINHUMID_SENSOR)))
 		
 	return humidity
 print getMoisture(ReadChannel(channel))

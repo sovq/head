@@ -36,6 +36,7 @@ angular.module('angularCharts').directive('acChart', [
 						htmlEnabled: false
 					},
 					yAxisTickValues:null,
+					yAxisTickFormat:null,
 					colors: [],
 					lineLegend: 'lineEnd',
 					lineCurveType: 'cardinal',
@@ -232,7 +233,7 @@ angular.module('angularCharts').directive('acChart', [
 			]);
 			var xAxis = d3.svg.axis().scale(x).orient('bottom');
 			filterXAxis(xAxis, x);
-			var yAxis = d3.svg.axis().scale(y).orient('left').ticks(6).tickFormat(d3.format('s')).tickValues(config.yAxisTickValues);
+			var yAxis = d3.svg.axis().scale(y).orient('left').ticks(6).tickFormat(config.yAxisTickFormat).tickValues(config.yAxisTickValues);
 			var line = d3.svg.line().interpolate(config.lineCurveType).x(function (d) {
 				return getX(d.x);
 			}).y(function (d) {
@@ -307,11 +308,12 @@ angular.module('angularCharts').directive('acChart', [
 			var svg = d3.select(chartContainer[0]).append('svg').attr('width', width + margin.left + margin.right).attr('height', height + margin.top + margin.bottom).append('g').attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 			var setDifferenece = 	d3.max(yData) - d3.min(yData);
    
-			
-			y.domain([
-				d3.min(yData) - (1),
-				d3.max(yData) + (1)
-			]);
+			if(config.yAxisTickValues == null){
+				y.domain([
+					d3.min(yData) - (1),
+					d3.max(yData) + (2)
+				]);
+			}
 			
 			svg.append('g').attr('class', 'x axis').attr('transform', 'translate(0,' + height + ')').call(xAxis);
 			svg.append('g').attr('class', 'y axis').call(yAxis);
@@ -319,7 +321,7 @@ angular.module('angularCharts').directive('acChart', [
 		
 				var point = svg.selectAll('.points').data(linedata).enter().append('g');
 				var path = point.attr('points', 'points').append('path').attr('class', 'ac-line').style('stroke', function (d, i) {
-					if(d.series=='min'){
+					if(d.series=='dry'){
 						return getColor(1);
 					}else{
 						return getColor(0);
@@ -370,7 +372,7 @@ myLoader();
        * @return {[type]}       [description]
        */
 			angular.forEach(linedata, function (value, key) {
-				if (value.series!='loading'&&value.series!='no data'&&value.series!='min'){
+				if (value.series!='loading'&&value.series!='no data'&&value.series!='dry'){
 					var points = svg.selectAll('.circle').data(removeNoDataAndFuture(value.values)).enter();
 					points.append('circle').attr('cx', function (d) {
 						return getX(d.x);

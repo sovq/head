@@ -15,6 +15,7 @@
 {"date":"2015-01-27, 22:54:35","toggle":"off","origin":"connection status","_id":"ADMXk6HiPjaXCMYd"}
 {"date":"2015-01-28, 21:55:18","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"AL39T13CY1wgaDWI"}
 {"date":"2015-01-28, 21:49:40","toggle":"off","origin":"new connection","ssr":"lighting","_id":"AVRLPFhNrTM5vNBV"}
+{"date":"2015-02-01, 21:12:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"AsXCqpKGxZTMcnFG"}
 {"date":"2015-01-28, 02:05:26","toggle":"off","origin":"scheduler","_id":"B1e7dRHQmkItiedq"}
 {"date":"2015-01-28, 22:10:35","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"BQvkXMHZgryHaTdl"}
 {"date":"2015-01-27, 22:54:59","toggle":"on","origin":"switch by web","_id":"Ca5MT4vzGttOZpid"}
@@ -30,6 +31,7 @@
 {"date":"2015-01-28, 22:07:51","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"Hhb3IT0ZqZWP0pf8"}
 {"date":"2015-01-28, 22:10:33","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"INBvUZhNM780Zy14"}
 {"date":"2015-02-01, 01:15:26","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"IroUM7SC3yniLboe"}
+{"date":"2015-02-01, 21:12:59","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Jr8da1sl7K6ZtmKq"}
 {"date":"2015-01-28, 22:07:42","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"JzIrMDlGvHhoi9Nh"}
 {"date":"2015-01-27, 02:33:30","toggle":"off","origin":"scheduler","_id":"KomyyzuWhOEcl8LW"}
 {"date":"2015-01-28, 16:29:08","toggle":"on","origin":"scheduler","_id":"L1AwvDOZsXACWxVT"}
@@ -41,6 +43,7 @@
 {"date":"2015-01-28, 21:49:00","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"NDBZt2P5O6bBeho6"}
 {"date":"2015-01-27, 22:56:31","toggle":"off","origin":"scheduler","_id":"NJvltAzIuGSOrX4l"}
 {"date":"2015-01-27, 23:18:33","toggle":"off","origin":"scheduler","_id":"NNP7qNup4wpGRWjq"}
+{"date":"2015-02-01, 21:12:59","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"NaQuNY8ehfLkk5M8"}
 {"date":"2015-01-28, 21:54:00","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"O99RIfXCcVRO0YRu"}
 {"date":"2015-01-28, 22:03:42","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"OCNXkzp62ScfrdoA"}
 {"date":"2015-01-28, 22:10:55","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"OeLSUnif3frcIW8w"}
@@ -50,9 +53,11 @@
 {"date":"2015-01-27, 22:51:36","toggle":"off","origin":"connection status","_id":"P1L95MNTmQKvBOUK"}
 {"date":"2015-01-27, 22:58:07","toggle":"off","origin":"scheduler","_id":"PrQeDiK2xKLBrcTB"}
 {"date":"2015-01-31, 23:28:34","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Q1lve2xbymmvNdhL"}
+{"date":"2015-02-01, 21:12:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"QFCI9NkNUiCE4ZrD"}
 {"date":"2015-01-28, 21:57:25","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"QwEVibOtQsUZ75aE"}
 {"date":"2015-01-28, 21:51:28","toggle":"off","origin":"new connection","ssr":"lighting","_id":"RKWFm2KN1iuusrg9"}
 {"date":"2015-01-28, 21:57:23","toggle":"on","origin":"new connection","ssr":"lighting","_id":"RN97NTw5cFru3yFG"}
+{"date":"2015-02-01, 21:12:17","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"RtRZe0SiAhiYO539"}
 {"date":"2015-01-27, 22:42:56","toggle":"off","origin":"connection status","_id":"SRi92kkMSyUxRXcc"}
 {"date":"2015-01-27, 22:57:56","toggle":"off","origin":"connection status","_id":"T8kltDMIAqZJ9hws"}
 {"date":"2015-01-28, 21:56:11","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"URx7Cwp8e8LJZb0C"}
@@ -66,6 +71,7 @@
 {"date":"2015-01-28, 02:04:49","toggle":"off","origin":"scheduler","_id":"X0r706x6HAgWtF0M"}
 {"date":"2015-01-31, 15:09:01","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"XdnSI2pL2FiMfCeK"}
 {"date":"2015-01-27, 22:39:17","toggle":"off","origin":"connection status","_id":"Xi5Ixks1MdqeHwSd"}
+{"date":"2015-02-02, 01:03:17","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Y1ht8tBIBSEzb3a9"}
 {"date":"2015-01-31, 23:28:36","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"YorYraYNK6QdM3gg"}
 {"date":"2015-01-27, 22:38:41","toggle":"off","origin":"connection status","_id":"YqepO5Ssttxb2Jvz"}
 {"date":"2015-01-28, 21:57:30","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"ZCJ013moLEDvjIRh"}
@@ -90,7 +96,9 @@
 {"date":"2015-02-01, 01:15:20","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"knneB4FZRtSrk4Ac"}
 {"date":"2015-01-28, 22:04:06","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"lVa0aPVq9xV3kzt2"}
 {"date":"2015-02-01, 16:53:44","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"m4YS7vqABTnyfEnL"}
+{"date":"2015-02-01, 23:33:18","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"m5CevoaQNbY93GqP"}
 {"date":"2015-01-28, 22:03:41","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"miBi4WVqmj5QSqFd"}
+{"date":"2015-02-01, 22:25:52","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"mr50ugJTMOfXVIw9"}
 {"date":"2015-01-27, 22:53:47","toggle":"off","origin":"scheduler","_id":"nKnVBzGPdUjqMpMS"}
 {"date":"2015-01-28, 22:03:32","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"oOIajORswONXzfO0"}
 {"date":"2015-01-27, 22:55:55","toggle":"on","origin":"connection status","_id":"p1EBHggeSnIuNpxO"}
@@ -105,8 +113,4 @@
 {"date":"2015-01-28, 21:41:24","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"xa311lPOItezLapH"}
 {"date":"2015-01-31, 23:28:34","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"yWc4xyAmQbRtZwlG"}
 {"date":"2015-01-28, 22:10:31","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"zZJ80x5jTNiNblxM"}
-{"date":"2015-02-01, 21:12:17","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"RtRZe0SiAhiYO539"}
-{"date":"2015-02-01, 21:12:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"AsXCqpKGxZTMcnFG"}
-{"date":"2015-02-01, 21:12:59","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"NaQuNY8ehfLkk5M8"}
-{"date":"2015-02-01, 21:12:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"QFCI9NkNUiCE4ZrD"}
-{"date":"2015-02-01, 21:12:59","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Jr8da1sl7K6ZtmKq"}
+{"date":"2015-02-02, 01:05:18","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"7DsWAxoG0RhgKeOy"}

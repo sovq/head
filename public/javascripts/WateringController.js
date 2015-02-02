@@ -4,8 +4,8 @@ $scope.config = {
 		tooltips: true,
 		labels: false,
 		xAxisMaxTicks: 6,
-		yAxisTickValues: [20,40,60,80,100],
-		
+		yAxisTickValues: [0.20,0.40,0.60,0.80],
+		yAxisTickFormat: d3.format("%"),
 		mouseover: function() {},
 		mouseout: function() {},
 		click: function() {},
@@ -30,8 +30,8 @@ $scope.config = {
 		}
 		http.get('/sensordata/moisture/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 				success(function(data, status, headers, config) {
-					var limit = 20;
-					  data.series.push("min")
+					var limit = 0.2;
+					  data.series.push("dry")
 					  for(i=0;i<data.data.length;i++){
 							data.data[i].y.push(limit)
 					  }
