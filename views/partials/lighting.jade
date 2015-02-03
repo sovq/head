@@ -28,8 +28,8 @@ div(ng-controller='LightScheduleController')
    span.text-muted status: {{lightSwitchState}}
    
  div(class='row placeholder')
-  .col-xs-6.col-sm-3.col-md-1.placeholder 
-   h2 LightSwitch
+  .col-xs-24.col-sm-6.col-md-12.placeholder 
+   h2 switch log: {{switchName}}
  div(class='row placeholder')
   .col-xs-6.col-sm-3.col-md-12.placeholder
-   div(lightswitchlog logdata="lightSwitchLogData")
+   div(switchlog logdata="lightSwitchLogData" switchname='switchName')

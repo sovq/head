@@ -5,6 +5,7 @@ GreenHouseApp.controller('LightScheduleController', ['$scope','dateFilter', func
         $scope.disabledDates = [];
         $scope.sunset = 'data not received';
 		
+        $scope.switchName = 'lighting';
         
         var socket = io.connect();
         $scope.lightSwitchChage = function(){

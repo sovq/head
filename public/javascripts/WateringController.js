@@ -16,6 +16,14 @@ $scope.config = {
 		}
 	};
 	
+	$scope.switchName = 'velve';
+	$scope.displayDurationMinus = true;
+	$scope.displyDurationPlus = true;
+	$scope.displayDrynessMinus = true;
+	$scope.displeyDrynessPlus = true;
+	
+	$scope.drynessLevel = 0.15
+	$scope.wateringDuration = 30
 		
 	var ZOOM_STEP = 0.6;
 	var TIME_STEP = 0.25;
@@ -30,7 +38,7 @@ $scope.config = {
 		}
 		http.get('/sensordata/moisture/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 				success(function(data, status, headers, config) {
-					var limit = 0.2;
+					var limit = 0.35;
 					  data.series.push("dry")
 					  for(i=0;i<data.data.length;i++){
 							data.data[i].y.push(limit)

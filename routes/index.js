@@ -81,16 +81,17 @@ function routes(params){
 		});
 	}
 	
-	this.lightswitchlog = function(req,res){
+	this.switchlog = function(req,res){
 		var startDate = req.params.date;
 		var direction = req.params.direction;
+		var switchName = req.params.switchname;
+		console.log(switchName);
 		
 		var query = null;
-		console.log("start date: "+startDate);
 		if(direction=='up'){
-			query = {date:{$gte:startDate}}
+			query = {date:{$gte:startDate},ssr:switchName}
 		}else if(direction=='down'){
-			query = {date:{$lte:startDate}}
+			query = {date:{$lte:startDate},ssr:switchName}
 		}
 		
 		var resultsArray = [];

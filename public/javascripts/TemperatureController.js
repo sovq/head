@@ -104,41 +104,7 @@ GreenHouseApp.controller('TemperatureController', ['$scope','$http', function($s
 
 	
 	
-GreenHouseApp.directive('lightswitchlog', ['$http','dateFilter',function($http,dateFilter) {
-	
-return {
-	scope:	{logdata : '='},  
-	replace: 'true',
-	templateUrl: 'partials/logstable',
-	link: function(scope, iElement, iAttrs){
-			scope.getLightSwitchLog=function(date,direction){
-				$http.get('/lightswitchlog/date/'+date+'/direction/'+direction).
-					success(function(data, status, headers, config) {
-						console.log(data);
-						scope.logdata=data;		  
-					}).
-					error(function(data, status, headers, config) {
-						console.log('error getting data');		  
-					});	
-			}
-			var date = new Date();
-			var formatDate = dateFilter(date,"yyyy-mm-dd, HH:MM:ss");
-			scope.getLightSwitchLog(formatDate,'down');
-	
-			scope.moveLog = function(direction){
-				var index = 0;
-				if(direction=='up'){
-					index = 0;
-				}else if(direction=='down'){
-					index = scope.logdata.length-1;
-				}
-				var date = scope.logdata[index].date;
-				scope.getLightSwitchLog(date,direction);
-			}
-		}
 
-	}
-}]);
 	
 	
 	

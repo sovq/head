@@ -42,7 +42,7 @@ app.get('/partials/:name', function (req, res){
 	res.render('partials/' + name);
 });
 app.get('/lightinfo/:date', routes.lightinfo);
-app.get('/lightswitchlog/date/:date/direction/:direction', routes.lightswitchlog);
+app.get('/switchlog/:switchname/date/:date/direction/:direction', routes.switchlog);
 app.get('/sensordata/:sensor/start/:start/end/:end', routes.sensordata)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
