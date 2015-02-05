@@ -9,7 +9,7 @@ var db = {
 var ssrSwitches = config.ssrSwitches;
 var sensors = config.sensors;
 
-
+var io = require('socket.io')(server);
 var EventEmitter = require('events').EventEmitter; 
 var Ssr = require('ssrswitch');
 var LightSchedule = require('lightschedule');
@@ -75,7 +75,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-var io = require('socket.io')(server);
+
 
 
 io.on('connection', function (socket) {
