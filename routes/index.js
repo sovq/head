@@ -3,12 +3,13 @@
  * GET home page.
  */
 
-function routes(params){
+function routes(params,wc){
 	var tempDB = params.sensorData;
 	var lightSwitchLogDB = params.switchlog;
 	var sunsetDB = params.sunset;
 	var dateFormat = require('dateformat');
 	var tempUtils = require('./sensordata');
+	var wateringController = wc;
 
 	this.index = function(req, res){
 		res.render('index', { title: 'GreenHouse' });
@@ -108,6 +109,25 @@ function routes(params){
 			//console.log(json);
 			res.end(json);
 		});	
+	}
+	
+	this.wateringcontrol = function(req,res){
+		var action = req.params.action;
+		var direction = req.params.direction;
+		if(action=='DrynessLevel'){
+			switch(direction){
+				case 'status':{wateringController.requestGetDrynessLevel(res);break};
+				case 'plus': {wateringController.requestSetDrynessLevelPlus(res);break};
+				case 'minus': {wateringController.requestSetDrynessLevelMinus(res);break};				
+			}
+		}else if(action=='WateringDuration'){
+			switch(direction){
+				
+				case 'status':{wateringController.requestGetWateringDuration(res);break};
+				case 'plus': {wateringController.requestSetWateringDurationPlus(res);break};
+				case 'minus': {wateringController.requestSetWateringDurationMinus(res);break};
+			}
+		}		
 	}
 	
 	return this;

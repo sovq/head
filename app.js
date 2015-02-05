@@ -9,8 +9,33 @@ var db = {
 var ssrSwitches = config.ssrSwitches;
 var sensors = config.sensors;
 
+var io = require('socket.io')(server);
+var EventEmitter = require('events').EventEmitter; 
+var Ssr = require('ssrswitch');
+var LightSchedule = require('lightschedule');
+var Sensor = require('sensor');
+var WateringController = require('wateringcontroller');
+
+var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
+var velve = new Ssr(ssrSwitches.velve,db.switchlog);
+var wateringController = new WateringController({	name:'watering',
+													ssrSwitch:velve,
+													configdb:db.config,
+													switchlog:db.switchlog,
+												})
+
+
+var lightScheduler = new LightSchedule.Scheduler(lightSwitch,db.config, db.sunset);
+
+//var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
+var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,20000);
+
+moistureSensor.addListener(moistureSensor.name,function(data){wateringController.sensorEventHandler(data)})
+
+
+
 var express = require('express')
-  , routes = require('./routes')(db)
+  , routes = require('./routes')(db,wateringController)
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -44,32 +69,12 @@ app.get('/partials/:name', function (req, res){
 app.get('/lightinfo/:date', routes.lightinfo);
 app.get('/switchlog/:switchname/date/:date/direction/:direction', routes.switchlog);
 app.get('/sensordata/:sensor/start/:start/end/:end', routes.sensordata)
+app.get('/wateringcontrol/:action/:direction',routes.wateringcontrol)
 
 var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
 
-var io = require('socket.io')(server);
-var EventEmitter = require('events').EventEmitter; 
-var Ssr = require('ssrswitch');
-var LightSchedule = require('lightschedule');
-var Sensor = require('sensor');
-var Controller = require('controller');
-
-
-
-var lightSwitch = new Ssr(ssrSwitches.lighting,db.switchlog);
-var velve = new Ssr(ssrSwitches.velve,db.switchlog);
-
-var wateringController = new Controller({name:'watering',ssrSwitch:velve})
-
-var lightScheduler = new LightSchedule.Scheduler(lightSwitch,db.config, db.sunset)
-
-
-var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
-var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,20000);
-
-moistureSensor.addListener(moistureSensor.name,wateringController.sensorEventListner)
 
 
 
@@ -85,6 +90,9 @@ io.on('connection', function (socket) {
 	
 	lightSwitch.addListener(lightSwitch.name,function(data){
 		socket.emit(lightSwitch.name,data)
+	});
+	wateringController.addListener(wateringController.name,function(data){
+		socket.emit(wateringController.name,data)
 	});
 	
 	lightScheduler.addListener(lightScheduler.name,function(data){
