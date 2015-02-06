@@ -15,15 +15,79 @@ $scope.config = {
 		  position: 'right'
 		}
 	};
-	
 	$scope.switchName = 'velve';
 	$scope.displayDurationMinus = true;
 	$scope.displyDurationPlus = true;
 	$scope.displayDrynessMinus = true;
 	$scope.displeyDrynessPlus = true;
 	
-	$scope.drynessLevel = 0.15
-	$scope.wateringDuration = 30
+	function clone(obj) {
+				if (null == obj || "object" != typeof obj) return obj;
+				if (obj instanceof Date) {
+					var copy = new Date();
+					copy.setTime(obj.getTime());
+					return copy;
+				}
+				if (obj instanceof Array) {
+					var copy = [];
+					for (var i = 0, len = obj.length; i < len; i++) {
+						copy[i] = clone(obj[i]);
+					}
+					return copy;
+				}
+				if (obj instanceof Object) {
+					var copy = {};
+					for (var attr in obj) {
+						if (obj.hasOwnProperty(attr)) copy[attr] = clone(obj[attr]);
+					}
+					return copy;
+				}
+
+				throw new Error("Unable to copy obj! Its type isn't supported.");
+			}
+	
+	function getWateringData(action,direction){
+
+		$http.get('/wateringcontrol/'+action+'/'+direction).
+			success(function(data, status, headers, config) {
+				$scope.drynessLevel = data.dryness
+				$scope.wateringDuration = data.duration/1000
+				if(action=='DrynessLevel'&&$scope.data!=null){
+					var myData = clone($scope.data);
+					if(myData.series.length==1){
+						myData.series.push('dry')
+						for(i=0;i<myData.data.length;i++){
+							myData.data[i].y.push(data.dryness);
+						}
+					}else{
+						for(i=0;i<myData.data.length;i++){
+							myData.data[i].y[1]=data.dryness;
+						}
+					}
+					console.log(myData)
+					$scope.data=myData;
+				}
+					
+				
+			}).
+			error(function(data, status, headers, config) {
+				alert('zjebanstwo');		  
+		});
+	}
+	
+	$scope.setDuration=function(direction){
+		$scope.displayDurationMinus = true;
+		$scope.displyDurationPlus = true;
+		getWateringData('WateringDuration',direction)
+	}
+	
+	$scope.setDryness=function(direction){
+		$scope.displayDrynessMinus = true;
+		$scope.displeyDrynessPlus = true;
+		getWateringData('DrynessLevel',direction)
+	}
+	
+	
 		
 	var ZOOM_STEP = 0.6;
 	var TIME_STEP = 0.25;
@@ -38,13 +102,9 @@ $scope.config = {
 		}
 		http.get('/sensordata/moisture/start/'+dateSpan[0].valueOf()+'/end/'+dateSpan[1].valueOf()).
 				success(function(data, status, headers, config) {
-					var limit = 0.35;
-					  data.series.push("dry")
-					  for(i=0;i<data.data.length;i++){
-							data.data[i].y.push(limit)
-					  }
-					  console.log(data);
-					  scope.data=data;		  
+
+					  scope.data=data;	
+					  getWateringData('DrynessLevel','status')	  
 				  }).
 				  error(function(data, status, headers, config) {
 					  alert('zjebanstwo');		  
@@ -110,6 +170,14 @@ $scope.config = {
 		getChartData($scope,timeSpan,$http);
 	}
 	
+	$scope.refreshLog = null
+	
+	var socket = io.connect();
+	socket.on('watering',function(){
+		$scope.$apply(function(){
+			$scope.refreshLog = Math.random();
+		})
+	});
 
 	
 }]);

@@ -9,7 +9,6 @@ var db = {
 var ssrSwitches = config.ssrSwitches;
 var sensors = config.sensors;
 
-var io = require('socket.io')(server);
 var EventEmitter = require('events').EventEmitter; 
 var Ssr = require('ssrswitch');
 var LightSchedule = require('lightschedule');
@@ -27,8 +26,8 @@ var wateringController = new WateringController({	name:'watering',
 
 var lightScheduler = new LightSchedule.Scheduler(lightSwitch,db.config, db.sunset);
 
-//var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,30000);
-var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,20000);
+var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,120000);
+var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,7200000);
 
 moistureSensor.addListener(moistureSensor.name,function(data){wateringController.sensorEventHandler(data)})
 
@@ -77,6 +76,7 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 
 
 
+var io = require('socket.io')(server);
 
 io.on('connection', function (socket) {
 	
