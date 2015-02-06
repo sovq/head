@@ -1,1 +1,59 @@
 h1.page-header Watering
+
+div(ng-controller='WateringController')
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-8.placeholder
+   div(data-ac-chart="'line'" data-ac-data="data" data-ac-config="config" style="width:100%;height:300px;")
+  .col-xs-6.col-sm-3.col-md-1.placeholder
+  .col-xs-6.col-sm-3.col-md-3.placeholder
+   .row.placeholder
+   .row.placeholder
+   .row.placeholder
+   .row
+     .row
+      .col-xs-7.placeholder.text-center
+       h4 Watering duration:
+     .row
+      .col-xs-2.placeholder.text-center
+       a(href='' ng-click='setDuration("minus")' ng-show='displayDurationMinus') 
+        i.fa.fa-chevron-circle-left.fa-2x
+      .col-xs-3.placeholder.text-center {{wateringDuration}} sec
+      .col-xs-2.placeholder.text-center
+       a(href='' ng-click='setDuration("plus")' ng-show='displyDurationPlus') 
+        i.fa.fa-chevron-circle-right.fa-2x
+   .row
+     .row
+      .col-xs-7.placeholder.text-center
+       h4 Dryness level:
+     .row
+      .col-xs-2.placeholder.text-center
+       a(href='' ng-click='setDryness("minus")' ng-show='displayDrynessMinus') 
+        i.fa.fa-chevron-circle-left.fa-2x
+      .col-xs-3.placeholder.text-center {{drynessLevel}}
+      .col-xs-2.placeholder.text-center
+       a(href='' ng-click='setDryness("plus")' ng-show='displeyDrynessPlus') 
+        i.fa.fa-chevron-circle-right.fa-2x
+ div(class='row placeholder')
+ 
+  .col-xs-1.placeholder.text-left
+   a(href='' ng-click='moveChart("left")') 
+    i.fa.fa-arrow-left 
+
+  .col-xs-2.placeholder.text-center start: {{startDate| date:"HH:MM:ss, dd-MM-yyyy"}}
+  .col-xs-2.placeholder.text-center
+   a(href='' ng-click='zoomChart("out")' ng-show='DisplayZoomOut') 
+    i.fa.fa-search-minus
+   &nbsp;&nbsp; {{zoomLevel}} &nbsp;&nbsp;
+   a(href='' ng-click='zoomChart("in")' ng-show='DisplayZoomIn') 
+    i.fa.fa-search-plus
+
+  .col-xs-2.placeholder.text-center end:{{endDate| date:"HH:MM:ss, dd-MM-yyyy"}}
+  .col-xs-1.placeholder.text-right
+   a(href='' ng-click='moveChart("right")' ) 
+    .fa.fa-arrow-right
+ div(class='row placeholder')
+  .col-xs-24.col-sm-6.col-md-12.placeholder 
+   h2 switch log: {{switchName}}
+ div(class='row placeholder')
+  .col-xs-6.col-sm-3.col-md-12.placeholder
+   div(switchlog logdata="lightSwitchLogData" switchname='switchName')

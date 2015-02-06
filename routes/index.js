@@ -3,12 +3,13 @@
  * GET home page.
  */
 
-function routes(params){
+function routes(params,wc){
 	var tempDB = params.sensorData;
 	var lightSwitchLogDB = params.switchlog;
 	var sunsetDB = params.sunset;
 	var dateFormat = require('dateformat');
 	var tempUtils = require('./sensordata');
+	var wateringController = wc;
 
 	this.index = function(req, res){
 		res.render('index', { title: 'GreenHouse' });
@@ -81,16 +82,17 @@ function routes(params){
 		});
 	}
 	
-	this.lightswitchlog = function(req,res){
+	this.switchlog = function(req,res){
 		var startDate = req.params.date;
 		var direction = req.params.direction;
+		var switchName = req.params.switchname;
+		console.log(switchName);
 		
 		var query = null;
-		console.log("start date: "+startDate);
 		if(direction=='up'){
-			query = {date:{$gte:startDate}}
+			query = {date:{$gte:startDate},ssr:switchName}
 		}else if(direction=='down'){
-			query = {date:{$lte:startDate}}
+			query = {date:{$lte:startDate},ssr:switchName}
 		}
 		
 		var resultsArray = [];
@@ -107,6 +109,25 @@ function routes(params){
 			//console.log(json);
 			res.end(json);
 		});	
+	}
+	
+	this.wateringcontrol = function(req,res){
+		var action = req.params.action;
+		var direction = req.params.direction;
+		if(action=='DrynessLevel'){
+			switch(direction){
+				case 'status':{wateringController.requestGetDrynessLevel(res);break};
+				case 'plus': {wateringController.requestSetDrynessLevelPlus(res);break};
+				case 'minus': {wateringController.requestSetDrynessLevelMinus(res);break};				
+			}
+		}else if(action=='WateringDuration'){
+			switch(direction){
+				
+				case 'status':{wateringController.requestGetWateringDuration(res);break};
+				case 'plus': {wateringController.requestSetWateringDurationPlus(res);break};
+				case 'minus': {wateringController.requestSetWateringDurationMinus(res);break};
+			}
+		}		
 	}
 	
 	return this;

@@ -1,2 +1,2 @@
 from random import randint
-print randint(2,100)
+print float(randint(2,100))/100

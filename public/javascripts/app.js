@@ -11,12 +11,13 @@ GreenHouseApp.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/lighting',
         controller: 'LightScheduleController'
       }).
-      when('/watering', {
-        templateUrl: 'partials/watering',
+      when('/watering',{
+		  templateUrl: 'partials/watering',		  
+		  controller: 'WateringController'	
       }).
       when('/temperature',{
 		  templateUrl: 'partials/temperature',
-//		  controller: 'LogsDisplayController'		  
+		  controller: 'TemperatureController'		  
 	  }).
       when('/watch', {
         templateUrl: 'partials/watch',
@@ -140,3 +141,4 @@ GreenHouseApp.controller('GaugeController', function() {
 	};
 	gauge2.draw();
 });
+
