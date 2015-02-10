@@ -2,7 +2,8 @@ GreenHouseApp.directive('switchlog', ['$http','dateFilter',function($http,dateFi
 	
 return {
 	scope:	{logdata : '=',
-			switchname : '='},  
+			switchname : '=',
+			refresh: '='},  
 	replace: 'true',
 	templateUrl: 'partials/logstable',
 	link: function(scope, iElement, iAttrs){
@@ -16,9 +17,13 @@ return {
 						console.log('error getting data');		  
 					});	
 			}
-			var date = new Date();
-			var formatDate = dateFilter(date,"yyyy-mm-dd, HH:MM:ss");
-			scope.getLightSwitchLog(formatDate,'down');
+
+			
+			refreshLog = function(){
+				var date = new Date();
+				var formatDate = dateFilter(date,"yyyy-mm-dd, HH:MM:ss");
+				scope.getLightSwitchLog(formatDate,'down');				
+			}
 	
 			scope.moveLog = function(direction){
 				var index = 0;
@@ -32,6 +37,10 @@ return {
 					scope.getLightSwitchLog(date,direction);
 				}
 			}
+			
+			refreshLog();
+			
+			scope.$watch('refresh', function(){refreshLog()});
 		}
 
 	}

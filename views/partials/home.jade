@@ -1,4 +1,11 @@
+div(ng-controller='GaugeController', class='row.placeholders')
+ .col-xs-12.col-md-10.placeholder.text-center
+  div(style='background-color:green; height:500px; width:100%; font-size:5em') Live Stream Placeholder
+ .col-xs-12.col-md-2.placeholder.text-center
+   div(gauge configuration='temperatureGauge' data='temperature')
+   div(gauge configuration='humidityGauge' data='humidity')
 div(class='row.placeholders')
+ .clearfix.hidden-xs(style='margin-bottom:25px')
  .col-xs-6.col-sm-3.placeholder.text-center
    i.fa.fa-lightbulb-o.fa-5x
    h4 Lighting
