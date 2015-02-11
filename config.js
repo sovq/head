@@ -3,7 +3,7 @@
 
 function config(){
 
-	this.rundir = '/home/kenu/head/'; 
+	this.rundir = '/home/pi/greenhouse/'; 
 	
 	if(this.rundir==null){
 		console.log("Set this.rundir in config.js");
@@ -41,7 +41,7 @@ function config(){
 		velve : {
 			name: 'velve',
 			////////////////////////////////////////////////////////
-			dummy: true,  // set to true if no device is connected
+			dummy: false,  // set to true if no device is connected
 			////////////////////////////////////////////////////////
 			superUserExec: true,
 			dir: 'python/',
@@ -56,7 +56,7 @@ function config(){
 		lighting : {
 			name: 'lighting',
 			////////////////////////////////////////////////////////
-			dummy: true,  // set to true if no device is connected
+			dummy: false,  // set to true if no device is connected
 			////////////////////////////////////////////////////////
 			superUserExec: true,
 			dir: 'python/',
@@ -74,7 +74,7 @@ function config(){
 		termometer1:{
 			name: 'AIR',
 			///////////////////////////////////////////////////////////
-			dummy: true, // set to true if no device is connected
+			dummy: false, // set to true if no device is connected
 			///////////////////////////////////////////////////////////
 			dir: 'python/',
 			path: 'termometer.py',
@@ -87,12 +87,24 @@ function config(){
 		soilmoisturemeter:{
 			name: 'moisture',
 			///////////////////////////////////////////////////////////////
-			dummy: true, // set to true if no device is connected
+			dummy: false, // set to true if no device is connected
 			//////////////////////////////////////////////////////////////
 			dir: 'python/',
 			path: 'soilmoisturemeter.py',
 			interface: 'spi',
 			channel: 0,
+			superUserExec: false,
+			rundir: this.rundir,
+			dummyPrefix: this.dummyPrefix,
+			buildExecString: this.buildExecString
+		},
+		video:{
+			name: 'video',
+			dir: 'python/',
+			path: 'videocapture.py',
+			interface: 'spi',
+			channel: this.rundir+'public/img/',
+			dummy: false,
 			superUserExec: false,
 			rundir: this.rundir,
 			dummyPrefix: this.dummyPrefix,

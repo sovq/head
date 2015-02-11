@@ -1,4 +1,6 @@
 {"date":"2015-01-31, 23:20:16","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"0CnqacRJJaPXc9em"}
+{"date":"2015-02-10, 22:54:59","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"0GTeIx7lqpSvXHG4"}
+{"date":"2015-02-11, 01:41:37","toggle":"velve","origin":"watering","ssr":"velve","_id":"13AQPP2iXTwW0BcJ"}
 {"date":"2015-02-03, 21:25:50","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"13sns4xAVNRs5IYM"}
 {"date":"2015-02-05, 00:44:43","toggle":"velve","origin":"watering","ssr":"velve","_id":"1OMK50caVIhKYFiw"}
 {"date":"2015-01-27, 22:56:25","toggle":"on","origin":"connection status","_id":"1coziaFSImBOHiqL"}
@@ -7,21 +9,30 @@
 {"date":"2015-02-05, 00:41:59","toggle":"on","origin":"watering","ssr":"velve","_id":"2U4bamkPMbVr0mWU"}
 {"date":"2015-01-28, 00:24:50","toggle":"off","origin":"connection status","_id":"2xuCgeKk3sspEohI"}
 {"date":"2015-01-28, 00:45:37","toggle":"on","origin":"connection status","_id":"33vbPZp8XAAg16qM"}
+{"date":"2015-02-11, 01:45:44","toggle":"on","origin":"watering","ssr":"velve","_id":"3a4cjowHXTz2IErr"}
 {"date":"2015-01-28, 22:07:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"42d4gsCZQxZQg8pe"}
+{"date":"2015-02-11, 01:27:33","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"4ShrA7U4qS3vExv3"}
 {"date":"2015-02-04, 00:51:19","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"4XMnk7GDsOj22j7v"}
+{"date":"2015-02-11, 01:28:40","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"4ryhDjxEX4aonXWL"}
 {"date":"2015-02-04, 00:37:50","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"4s9V7QGLQSpfMRCL"}
 {"date":"2015-01-27, 22:56:55","toggle":"off","origin":"connection status","_id":"52hzm7OU5hUZiM2t"}
 {"date":"2015-02-05, 00:41:19","toggle":"off","origin":"watering","ssr":"velve","_id":"5GKgRSxMxQaevL98"}
 {"date":"2015-01-28, 21:57:27","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"5KdEhxfJEDJRjKaM"}
+{"date":"2015-02-11, 01:45:59","toggle":"off","origin":"watering","ssr":"velve","_id":"5khYnX7N3zvUT1rP"}
 {"date":"2015-01-28, 22:07:37","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"5seZpNiTgkf5gp2C"}
 {"date":"2015-02-03, 21:26:13","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"60HhTEgu93LCGL8C"}
 {"date":"2015-02-04, 00:30:14","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"6J6PQNVtUACnEvBR"}
+{"date":"2015-02-11, 01:49:48","toggle":"on","origin":"watering","ssr":"velve","_id":"6Pl9fsdARJSF7ZnK"}
+{"date":"2015-02-11, 01:46:25","toggle":"on","origin":"watering","ssr":"velve","_id":"7951akzTVEriqSeW"}
 {"date":"2015-02-02, 01:05:18","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"7DsWAxoG0RhgKeOy"}
 {"date":"2015-01-28, 00:40:43","toggle":"on","origin":"connection status","_id":"7h8sP235NirItOi8"}
 {"date":"2015-01-31, 23:28:24","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"7iTiHx08i5KDmY02"}
 {"date":"2015-01-31, 23:28:35","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"8KPAaI7SNSWIw5Ix"}
 {"date":"2015-02-03, 21:22:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"8SMRGUktg4A4xtXF"}
+{"date":"2015-02-11, 01:51:09","toggle":"on","origin":"watering","ssr":"velve","_id":"8TOBcDuEqfXwbStL"}
+{"date":"2015-02-11, 01:43:24","toggle":"velve","origin":"watering","ssr":"velve","_id":"9Asy7tvdSDgI1dGH"}
 {"date":"2015-02-04, 00:39:53","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"9NWf1XJ3qpYqGJUa"}
+{"date":"2015-02-11, 01:36:14","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"9WDSCM1S7CXQHJrF"}
 {"date":"2015-02-01, 01:15:18","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"9mejWkrPP9t5bQTD"}
 {"date":"2015-01-28, 02:11:57","toggle":"off","origin":"scheduler","_id":"A3JYrPCKICzuacrm"}
 {"date":"2015-02-04, 00:40:33","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"A3dIyCJiek39ddaN"}
@@ -36,27 +47,34 @@
 {"date":"2015-01-28, 22:10:35","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"BQvkXMHZgryHaTdl"}
 {"date":"2015-01-27, 22:54:59","toggle":"on","origin":"switch by web","_id":"Ca5MT4vzGttOZpid"}
 {"date":"2015-01-27, 01:47:04","toggle":"on","origin":"connection status","_id":"CdooWkxqW614B5vN"}
+{"date":"2015-02-11, 01:45:18","toggle":"off","origin":"watering","ssr":"velve","_id":"Cq1oCqHNY86NG3dn"}
 {"date":"2015-01-27, 23:14:28","toggle":"off","origin":"connection status","_id":"DAXDqYt8pmdh2qOo"}
 {"date":"2015-01-27, 16:28:30","toggle":"on","origin":"scheduler","_id":"DOdIqQAlaJAbjfXc"}
+{"date":"2015-02-11, 01:27:31","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"DQ1a3wBUy5pbcr8G"}
 {"date":"2015-02-03, 21:23:58","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"DW2XpA3vRU25npyZ"}
 {"date":"2015-01-28, 21:55:33","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"DiWYI8VeglKywQKO"}
 {"date":"2015-02-03, 21:26:35","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Dna4jMGgWmrZNQzF"}
 {"date":"2015-01-31, 23:28:24","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"DoRgAsTlheoUrFHc"}
 {"date":"2015-02-03, 21:26:13","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"DqHsi9E4bWvIIXZx"}
 {"date":"2015-02-05, 01:07:48","toggle":"velve","origin":"watering","ssr":"velve","_id":"EgwiPjuCTkKz5zds"}
+{"date":"2015-02-11, 01:50:29","toggle":"on","origin":"watering","ssr":"velve","_id":"FEwmiSUpUHOccjQv"}
 {"date":"2015-02-01, 01:15:19","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"GCvoxf1bKDjhZi0f"}
 {"date":"2015-01-31, 23:28:34","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"GHRUoatiUuVXMyRO"}
 {"date":"2015-01-28, 00:23:53","toggle":"off","origin":"connection status","_id":"HE28hjGyM9LYanGW"}
 {"date":"2015-01-27, 23:14:33","toggle":"off","origin":"scheduler","_id":"Hga4O8IsgmKTq3gs"}
 {"date":"2015-01-28, 22:07:51","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"Hhb3IT0ZqZWP0pf8"}
+{"date":"2015-02-11, 01:02:14","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"IG90D3txqurLK4LW"}
 {"date":"2015-01-28, 22:10:33","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"INBvUZhNM780Zy14"}
+{"date":"2015-02-11, 01:28:41","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"IhXHFLxrCc9rmw14"}
 {"date":"2015-02-05, 00:41:19","toggle":"on","origin":"watering","ssr":"velve","_id":"IqTWzEGBTf1Vqdmt"}
 {"date":"2015-02-01, 01:15:26","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"IroUM7SC3yniLboe"}
 {"date":"2015-02-05, 00:59:27","toggle":"velve","origin":"watering","ssr":"velve","_id":"JFqzCKszYgdFpYRI"}
+{"date":"2015-02-11, 01:44:23","toggle":"on","origin":"watering","ssr":"velve","_id":"JJ04y5KH5xXrY3Nx"}
 {"date":"2015-02-03, 21:25:13","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"JXIjuJIR9IauQp65"}
 {"date":"2015-02-01, 21:12:59","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Jr8da1sl7K6ZtmKq"}
 {"date":"2015-01-28, 22:07:42","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"JzIrMDlGvHhoi9Nh"}
 {"date":"2015-01-27, 02:33:30","toggle":"off","origin":"scheduler","_id":"KomyyzuWhOEcl8LW"}
+{"date":"2015-02-11, 01:50:44","toggle":"off","origin":"watering","ssr":"velve","_id":"KsGYCPg5g3aAgJrY"}
 {"date":"2015-01-28, 16:29:08","toggle":"on","origin":"scheduler","_id":"L1AwvDOZsXACWxVT"}
 {"date":"2015-02-03, 21:25:50","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"LGaunvfoBJ0uo1Jg"}
 {"date":"2015-01-28, 21:00:08","toggle":"off","origin":"scheduler","_id":"LiZBU0UDTYoQzu4b"}
@@ -64,6 +82,7 @@
 {"date":"2015-02-04, 00:33:24","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"M8RZNEsn6SyPXOst"}
 {"date":"2015-01-28, 22:10:36","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"MIxSo5xKYXN5UOq2"}
 {"date":"2015-01-27, 21:00:30","toggle":"off","origin":"scheduler","_id":"MvSqXDMPLyjauV6q"}
+{"date":"2015-02-11, 01:41:21","toggle":"velve","origin":"watering","ssr":"velve","_id":"MxyzI5ztBovye7B9"}
 {"date":"2015-01-28, 21:55:00","toggle":"on","origin":"new connection","ssr":"lighting","_id":"N3H5IdMoXSKnMc5k"}
 {"date":"2015-01-28, 21:49:00","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"NDBZt2P5O6bBeho6"}
 {"date":"2015-01-27, 22:56:31","toggle":"off","origin":"scheduler","_id":"NJvltAzIuGSOrX4l"}
@@ -73,22 +92,32 @@
 {"date":"2015-01-28, 21:54:00","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"O99RIfXCcVRO0YRu"}
 {"date":"2015-01-28, 22:03:42","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"OCNXkzp62ScfrdoA"}
 {"date":"2015-02-05, 00:44:24","toggle":"velve","origin":"watering","ssr":"velve","_id":"OKhWgLAuTBLUN0Wc"}
+{"date":"2015-02-11, 01:42:02","toggle":"velve","origin":"watering","ssr":"velve","_id":"OLOvrq2tTiFmOUR9"}
+{"date":"2015-02-11, 01:47:37","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"ORvODVuJK5x0yyWt"}
 {"date":"2015-01-28, 22:10:55","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"OeLSUnif3frcIW8w"}
 {"date":"2015-01-28, 22:03:44","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"OebcwDryg72ZLloY"}
 {"date":"2015-01-27, 22:49:18","toggle":"off","origin":"connection status","_id":"OhSYeDQnmDCNk1m5"}
 {"date":"2015-01-31, 23:28:36","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"OzJkRJL8dVxfCnTq"}
 {"date":"2015-01-27, 22:51:36","toggle":"off","origin":"connection status","_id":"P1L95MNTmQKvBOUK"}
+{"date":"2015-02-11, 01:27:32","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"P5bxNv4mduJMm0lz"}
 {"date":"2015-02-03, 21:26:35","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"PBOLvJ2RGwaXE55Q"}
 {"date":"2015-02-03, 21:26:13","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"PFXV6srLTUNnSKbU"}
 {"date":"2015-02-05, 00:40:59","toggle":"on","origin":"watering","ssr":"velve","_id":"PSMpnQ7xJ5rTfENG"}
+{"date":"2015-02-11, 01:47:47","toggle":"on","origin":"watering","ssr":"velve","_id":"PdLhxRm9tEPQ4EVe"}
 {"date":"2015-01-27, 22:58:07","toggle":"off","origin":"scheduler","_id":"PrQeDiK2xKLBrcTB"}
 {"date":"2015-01-31, 23:28:34","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Q1lve2xbymmvNdhL"}
 {"date":"2015-02-01, 21:12:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"QFCI9NkNUiCE4ZrD"}
 {"date":"2015-02-03, 21:23:00","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"QIW6gggljMH9uyTN"}
+{"date":"2015-02-11, 01:22:14","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"Qek48ss91xuG0a3f"}
+{"date":"2015-02-11, 00:05:53","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"QtGPe8pc9MwW9WqZ"}
 {"date":"2015-01-28, 21:57:25","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"QwEVibOtQsUZ75aE"}
+{"date":"2015-02-11, 00:05:56","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"QwplnsB8rHfDa2ko"}
+{"date":"2015-02-11, 01:51:30","toggle":"off","origin":"watering","ssr":"velve","_id":"R3HzNlIoZiNiUEHm"}
 {"date":"2015-01-28, 21:51:28","toggle":"off","origin":"new connection","ssr":"lighting","_id":"RKWFm2KN1iuusrg9"}
 {"date":"2015-01-28, 21:57:23","toggle":"on","origin":"new connection","ssr":"lighting","_id":"RN97NTw5cFru3yFG"}
 {"date":"2015-02-01, 21:12:17","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"RtRZe0SiAhiYO539"}
+{"date":"2015-02-11, 01:48:43","toggle":"off","origin":"watering","ssr":"velve","_id":"SHeedTdMpWTL3fjs"}
+{"date":"2015-02-11, 01:22:17","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"SIpMQ3nlXfLxYTQz"}
 {"date":"2015-01-27, 22:42:56","toggle":"off","origin":"connection status","_id":"SRi92kkMSyUxRXcc"}
 {"date":"2015-02-05, 00:41:59","toggle":"off","origin":"watering","ssr":"velve","_id":"SdtB00aVAmNMKAJo"}
 {"date":"2015-02-05, 00:40:20","toggle":"on","origin":"watering","ssr":"velve","_id":"SljL2XeWC47hP8xf"}
@@ -99,25 +128,34 @@
 {"date":"2015-01-28, 21:56:11","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"URx7Cwp8e8LJZb0C"}
 {"date":"2015-01-28, 22:10:56","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"UfoKVRurlGghN4LM"}
 {"date":"2015-01-28, 02:22:08","toggle":"off","origin":"scheduler","_id":"UveL7AegeLugkVx0"}
+{"date":"2015-02-11, 01:52:10","toggle":"off","origin":"watering","ssr":"velve","_id":"VF18OLhKLGb9AX3P"}
 {"date":"2015-01-28, 22:10:31","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"VTOda7i2hquW9iZz"}
 {"date":"2015-02-03, 21:23:58","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"VfDQekC4U2C0urY7"}
 {"date":"2015-01-31, 23:28:24","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"VrZY6aECzeC2tYU4"}
 {"date":"2015-01-28, 21:51:22","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"WLgzN2CnaGeYfSsz"}
 {"date":"2015-02-01, 01:15:13","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"WNIqUDqvuAYJjx3U"}
 {"date":"2015-01-28, 22:03:15","toggle":"off","origin":"new connection","ssr":"lighting","_id":"WgEngJvPofwHXsF1"}
+{"date":"2015-02-11, 01:27:32","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"WlASoCzgxTHRf4HT"}
 {"date":"2015-01-28, 02:04:49","toggle":"off","origin":"scheduler","_id":"X0r706x6HAgWtF0M"}
 {"date":"2015-02-04, 00:39:48","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"X1GMugTmbbeejtfl"}
 {"date":"2015-02-03, 21:28:16","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"X1QiFmTLWG5rjeXJ"}
 {"date":"2015-01-31, 15:09:01","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"XdnSI2pL2FiMfCeK"}
 {"date":"2015-01-27, 22:39:17","toggle":"off","origin":"connection status","_id":"Xi5Ixks1MdqeHwSd"}
+{"date":"2015-02-11, 01:43:38","toggle":"velve","origin":"watering","ssr":"velve","_id":"XjB00yACuhna6ONQ"}
 {"date":"2015-02-05, 00:40:59","toggle":"off","origin":"watering","ssr":"velve","_id":"XrkqTfQJYtjWhxwR"}
 {"date":"2015-02-02, 01:03:17","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"Y1ht8tBIBSEzb3a9"}
+{"date":"2015-02-11, 01:32:02","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"YP4sTTic0bvupQDB"}
 {"date":"2015-01-31, 23:28:36","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"YorYraYNK6QdM3gg"}
 {"date":"2015-01-27, 22:38:41","toggle":"off","origin":"connection status","_id":"YqepO5Ssttxb2Jvz"}
 {"date":"2015-01-28, 21:57:30","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"ZCJ013moLEDvjIRh"}
+{"date":"2015-02-11, 01:46:40","toggle":"off","origin":"watering","ssr":"velve","_id":"ZDK0blqhOr5XDw9M"}
+{"date":"2015-02-11, 01:51:53","toggle":"on","origin":"watering","ssr":"velve","_id":"Zi654Xa10CO1CSV3"}
 {"date":"2015-01-27, 22:55:12","toggle":"off","origin":"switch by web","_id":"ZuUcMiIzLNpkBlOq"}
+{"date":"2015-02-11, 01:39:16","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"Zyrf6ejJmFuMYvTg"}
 {"date":"2015-02-03, 21:25:50","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"a9l8bYtkdO2m1F8W"}
+{"date":"2015-02-11, 01:49:22","toggle":"off","origin":"watering","ssr":"velve","_id":"aGmwXOJgFZM2ZNDO"}
 {"date":"2015-01-27, 22:57:24","toggle":"off","origin":"connection status","_id":"aP8fzaHN2NSWy4rl"}
+{"date":"2015-02-11, 01:42:58","toggle":"velve","origin":"watering","ssr":"velve","_id":"acmirmrqGMXscijU"}
 {"date":"2015-02-01, 01:15:24","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"aghknrhVz5A8GXlb"}
 {"date":"2015-02-03, 21:26:34","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"asEISeNlkmWSjMj5"}
 {"date":"2015-02-03, 21:23:00","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"b6VCmxZQlKwtfBFa"}
@@ -128,11 +166,15 @@
 {"date":"2015-02-05, 00:44:43","toggle":"velve","origin":"watering","ssr":"velve","_id":"bgZ3r4ytk5SY923e"}
 {"date":"2015-02-03, 21:23:21","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"bjhgTxYF5WRHfmFv"}
 {"date":"2015-02-01, 16:53:44","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"bp0GwglaoNkfAIuh"}
+{"date":"2015-02-11, 01:22:17","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"c24tSZtkeGFsnnk5"}
 {"date":"2015-01-27, 22:38:42","toggle":"off","origin":"scheduler","_id":"cp6LkOC0a0Bq9CCj"}
 {"date":"2015-02-03, 21:33:06","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"dOTCzcMelH9eEtKK"}
 {"date":"2015-01-27, 22:35:17","toggle":"off","origin":"connection status","_id":"dVNUzTyn5tiRgGL0"}
 {"date":"2015-02-01, 16:53:41","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"dqigCdsTL19nDSrs"}
+{"date":"2015-02-11, 01:44:38","toggle":"off","origin":"watering","ssr":"velve","_id":"dud94tTLAhyYjfT4"}
 {"date":"2015-02-03, 21:23:20","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"e54yek26S5Qzltez"}
+{"date":"2015-02-11, 01:28:41","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"ejjB6EHtnuxSt57w"}
+{"date":"2015-02-11, 01:45:03","toggle":"on","origin":"watering","ssr":"velve","_id":"en2TMl5PFHXgdzzE"}
 {"date":"2015-01-31, 15:35:21","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"ewhlRfYCj8VwYxIw"}
 {"date":"2015-02-10, 09:03:42","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"f1CCYsX6hQK2Zx8Q"}
 {"date":"2015-01-28, 00:24:53","toggle":"on","origin":"switch by web","_id":"f2qGaIhR533QMN3f"}
@@ -142,30 +184,45 @@
 {"date":"2015-01-28, 01:48:35","toggle":"off","origin":"scheduler","_id":"hbUKtTDqbowENsQb"}
 {"date":"2015-02-05, 00:41:39","toggle":"off","origin":"watering","ssr":"velve","_id":"hrFSnzIYBlLTi8RZ"}
 {"date":"2015-01-27, 23:18:27","toggle":"off","origin":"connection status","_id":"j9QtLjYb2olv390T"}
+{"date":"2015-02-11, 01:48:28","toggle":"on","origin":"watering","ssr":"velve","_id":"jJ9vkVxIQYHWZpAW"}
 {"date":"2015-02-03, 21:26:35","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"jTzweAht8lC5O7Ih"}
 {"date":"2015-02-05, 00:59:27","toggle":"velve","origin":"watering","ssr":"velve","_id":"kBmabvsftVlhgKo5"}
 {"date":"2015-01-28, 22:04:05","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"kEOCZPvMldg5uDlC"}
 {"date":"2015-01-27, 22:39:23","toggle":"off","origin":"connection status","_id":"kIOHGvRacywT5uxc"}
 {"date":"2015-02-01, 01:15:20","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"knneB4FZRtSrk4Ac"}
+{"date":"2015-02-11, 01:34:08","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"l4xHmRP5mlPZX5Op"}
+{"date":"2015-02-11, 01:48:02","toggle":"off","origin":"watering","ssr":"velve","_id":"l9cvD9uboe1auJYe"}
+{"date":"2015-02-11, 00:05:53","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"lUgb65tp90taI7bw"}
 {"date":"2015-01-28, 22:04:06","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"lVa0aPVq9xV3kzt2"}
 {"date":"2015-02-01, 16:53:44","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"m4YS7vqABTnyfEnL"}
 {"date":"2015-02-01, 23:33:18","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"m5CevoaQNbY93GqP"}
+{"date":"2015-02-11, 01:36:44","toggle":"velve","origin":"watering","ssr":"velve","_id":"mBrUoaRCLXpXBFVW"}
+{"date":"2015-02-11, 01:44:04","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"mXK5qBptn9RWRjMy"}
 {"date":"2015-02-05, 00:42:02","toggle":"on","origin":"watering","ssr":"velve","_id":"mYrapShOD7eaQ0uN"}
 {"date":"2015-02-04, 00:50:19","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"maEomcb0TRhoUucq"}
+{"date":"2015-02-11, 01:28:40","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"mgyGEqfotbEjEBHc"}
 {"date":"2015-01-28, 22:03:41","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"miBi4WVqmj5QSqFd"}
 {"date":"2015-02-03, 21:26:13","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"miGa1m8OFsAtBbqT"}
 {"date":"2015-02-03, 21:23:58","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"mljhTTpbwBXqCmgY"}
 {"date":"2015-02-01, 22:25:52","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"mr50ugJTMOfXVIw9"}
 {"date":"2015-02-03, 21:22:48","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"nB23ywvmAVo7DQ15"}
+{"date":"2015-02-11, 01:50:03","toggle":"off","origin":"watering","ssr":"velve","_id":"nKhDdfHjiPmw7uIB"}
 {"date":"2015-01-27, 22:53:47","toggle":"off","origin":"scheduler","_id":"nKnVBzGPdUjqMpMS"}
+{"date":"2015-02-11, 01:42:17","toggle":"velve","origin":"watering","ssr":"velve","_id":"nwkgf9UERjTwPYmw"}
+{"date":"2015-02-10, 21:17:27","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"o6l1FYyvSSc7qN3n"}
 {"date":"2015-02-03, 21:28:16","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"oElNoZQpqyvx9G0g"}
 {"date":"2015-01-28, 22:03:32","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"oOIajORswONXzfO0"}
+{"date":"2015-02-11, 01:42:43","toggle":"velve","origin":"watering","ssr":"velve","_id":"oQ4BTJeF4CndWXBD"}
+{"date":"2015-02-11, 01:53:29","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"otNloQtiREudYC7G"}
 {"date":"2015-02-05, 00:42:02","toggle":"off","origin":"watering","ssr":"velve","_id":"owYa03a0jh12GLfA"}
 {"date":"2015-01-27, 22:55:55","toggle":"on","origin":"connection status","_id":"p1EBHggeSnIuNpxO"}
+{"date":"2015-02-10, 22:54:59","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"pYoRrmISoS7s6e9J"}
 {"date":"2015-02-03, 20:14:45","toggle":"on","origin":"scheduler","ssr":"lighting","_id":"poGe3aG6BDrdM3Ch"}
 {"date":"2015-01-28, 22:07:41","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"qJjkq8MAiw5hO0yA"}
 {"date":"2015-02-04, 00:49:16","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"qK1ludHcwXCjbMK5"}
 {"date":"2015-01-28, 22:02:17","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"qV0uQLCAV4BuijVu"}
+{"date":"2015-02-11, 01:40:36","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"rKlQsFd7n0xhxabn"}
+{"date":"2015-02-11, 01:37:22","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"rfMxXvNrXTegjgCf"}
 {"date":"2015-01-28, 01:42:57","toggle":"off","origin":"scheduler","_id":"sLdWzJGdVQQcWGbx"}
 {"date":"2015-02-05, 00:44:24","toggle":"velve","origin":"watering","ssr":"velve","_id":"tN65y6iifQ7KRR3J"}
 {"date":"2015-02-03, 21:23:21","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"tdM1zIFHkhjk5Vb9"}
@@ -175,13 +232,26 @@
 {"date":"2015-02-04, 00:52:02","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"vqK9LaTLirJ03UL0"}
 {"date":"2015-01-28, 22:10:34","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"vqcfaXroV14fYkiI"}
 {"date":"2015-02-05, 01:07:48","toggle":"velve","origin":"watering","ssr":"velve","_id":"vyI2Lh74JjH3uccQ"}
+{"date":"2015-02-11, 01:49:07","toggle":"on","origin":"watering","ssr":"velve","_id":"wIjFoccnUqpsziC5"}
 {"date":"2015-01-31, 23:28:34","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"wJRVIPYaTYTuOzzK"}
+{"date":"2015-02-11, 01:27:31","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"wXekr4noTkNdieMt"}
 {"date":"2015-01-28, 22:07:59","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"x3Bxp9XZiHSck37p"}
 {"date":"2015-02-04, 00:41:36","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"x3TdhFBVbsu6npW9"}
 {"date":"2015-01-28, 22:02:16","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"xIGhEUuV5hsuqN6c"}
 {"date":"2015-02-03, 21:23:58","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"xZgeY3zDYuQeTSCC"}
 {"date":"2015-01-28, 21:41:24","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"xa311lPOItezLapH"}
 {"date":"2015-02-03, 20:13:28","toggle":"on","origin":"scheduler","ssr":"lighting","_id":"y5oNRV0HFt1TbxdO"}
+{"date":"2015-02-11, 01:22:22","toggle":"lighting","origin":"scheduler","ssr":"lighting","_id":"yNsvY7NKJjc4kfPE"}
 {"date":"2015-01-31, 23:28:34","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"yWc4xyAmQbRtZwlG"}
 {"date":"2015-01-28, 22:10:31","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"zZJ80x5jTNiNblxM"}
-{"date":"2015-02-10, 21:17:27","toggle":"lighting","origin":"switch by web","ssr":"lighting","_id":"o6l1FYyvSSc7qN3n"}
+{"date":"2015-02-11, 01:47:06","toggle":"on","origin":"watering","ssr":"velve","_id":"zuz1zNtf4Hr7uP9X"}
+{"date":"2015-02-11, 01:56:51","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"IVopMpgAfuxYKycu"}
+{"date":"2015-02-11, 02:02:13","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"4YbKUMS3mzpLWBZ8"}
+{"date":"2015-02-11, 02:02:14","toggle":"off","origin":"switch by web","ssr":"lighting","_id":"6XkuLMFpnQ6BZ3or"}
+{"date":"2015-02-11, 02:02:14","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"8BLz7UjebngJ1W66"}
+{"date":"2015-02-11, 02:02:15","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"vwwuWxHxgRkjAeCs"}
+{"date":"2015-02-11, 02:02:15","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"CZploH4jFGbZOivY"}
+{"date":"2015-02-11, 02:03:53","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"d88Q2Hf73OPJJ7ty"}
+{"date":"2015-02-11, 02:03:53","toggle":"on","origin":"switch by web","ssr":"lighting","_id":"xXY55bB97bRbiQKq"}
+{"date":"2015-02-11, 02:03:53","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"lDPIYzUrw8xAnwPY"}
+{"date":"2015-02-11, 02:03:54","toggle":"off","origin":"scheduler","ssr":"lighting","_id":"C5DKrUO7ndd7IEIg"}

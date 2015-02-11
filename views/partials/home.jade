@@ -1,24 +1,25 @@
-div(ng-controller='GaugeController', class='row.placeholders')
- .col-xs-12.col-md-10.placeholder.text-center
-  div(style='background-color:green; height:500px; width:100%; font-size:5em') Live Stream Placeholder
+div(ng-controller='HomeController', class='row.placeholders')
+ .col-xs-12.col-md-1.placeholder.text-center
+ .col-xs-12.col-md-8.placeholder.text-center
+  div(video style='background-color:green; height:500px; width:100%; font-size:5em' pic="img")
  .col-xs-12.col-md-2.placeholder.text-center
    div(gauge configuration='temperatureGauge' data='temperature')
    div(gauge configuration='humidityGauge' data='humidity')
+ .col-xs-12.col-md-1.placeholder.text-center
 div(class='row.placeholders')
  .clearfix.hidden-xs(style='margin-bottom:25px')
  .col-xs-6.col-sm-3.placeholder.text-center
-   i.fa.fa-lightbulb-o.fa-5x
+   a(href='#/lighting')
+    i.fa.fa-lightbulb-o.fa-5x
    h4 Lighting
    span.text-muted Lighting schedule
  .col-xs-6.col-sm-3.placeholder.text-center
-   i.fa.fa-tint.fa-5x
+   a(href='#/watering')
+    i.fa.fa-tint.fa-5x
    h4 Watering
    span.text-muted Watering &amp; humidity
  .col-xs-6.col-sm-3.placeholder.text-center
-   i.fa.fa-camera.fa-5x
-   h4 Watch
-   span.text-muted Live stream  
- .col-xs-6.col-sm-3.placeholder.text-center
-   i.fa.fa-folder-open.fa-5x
+   a(href='#/temperature')
+    i.fa.fa-folder-open.fa-5x
    h4 Temperature
    span.text-muted Temperature

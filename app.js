@@ -26,8 +26,8 @@ var wateringController = new WateringController({	name:'watering',
 
 var lightScheduler = new LightSchedule.Scheduler(lightSwitch,db.config, db.sunset);
 
-var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,1800000);
-var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,7200000);
+var temperatureSensor = new Sensor(sensors.termometer1,db.sensorData,1800000);var moistureSensor = new Sensor(sensors.soilmoisturemeter,db.sensorData,7200000);
+var videoCapture = new Sensor(sensors.video,db.sensorData,3600000);
 
 moistureSensor.addListener(moistureSensor.name,function(data){wateringController.sensorEventHandler(data)})
 
@@ -97,6 +97,10 @@ io.on('connection', function (socket) {
 		moistureSensor.measure()
 	})
 	
+	socket.on('getcaptured',function(){
+		videoCapture.measure()
+	})
+	
 	lightSwitch.addListener(lightSwitch.name,function(data){
 		socket.emit(lightSwitch.name,data)
 	});
@@ -113,6 +117,9 @@ io.on('connection', function (socket) {
 	moistureSensor.addListener(moistureSensor.name,function(data){
 		socket.emit('moisture',data)
 	});
+	videoCapture.addListener(videoCapture.name,function(data){
+		socket.emit('captured',data)
+	})
 
 });
 

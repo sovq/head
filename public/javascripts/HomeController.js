@@ -14,13 +14,20 @@ GreenHouseApp.controller('HomeController',['$scope','$http',function($scope,$htt
 		height: 200,
 		glow: false,
 		units: '%',
-		title: 'Humidity',
+		title: 'Humidity'
 		
 	}
 	$scope.temperature = 0;
 	$scope.humidity = 0;
+	$scope.img = ''
 	
 	var socket = io.connect();
+	
+	socket.on('captured',function(data){
+		$scope.$apply(function(){
+			$scope.img = 'img/'+data;
+		})
+	})
 	
 	socket.on('temperature',function(data){
 		$scope.$apply(function(){
@@ -35,10 +42,24 @@ GreenHouseApp.controller('HomeController',['$scope','$http',function($scope,$htt
 	})
 	socket.emit('gettemperature');
 	socket.emit('getmoisture');
+	socket.emit('getcaptured');
 }]);
 
+GreenHouseApp.directive('video',function() {
+	
+	return {
+		scope:	{pic : '='},
+		replace: 'true',
+		template: '<img ng-src="{{pic}}" class="img-rounded">',
 
-GreenHouseApp.directive('gauge',['$http','dateFilter','$compile','$templateCache',function($http,dateFilter,$compile,$templateCache) {
+		link: function(scope, iElement, iAttrs){
+			
+		}
+
+	}
+});
+
+GreenHouseApp.directive('gauge',function() {
 	
 	return {
 		scope:	{configuration : '=',
@@ -60,6 +81,6 @@ GreenHouseApp.directive('gauge',['$http','dateFilter','$compile','$templateCache
 		}
 
 	}
-}]);
+});
 
 
